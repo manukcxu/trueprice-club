@@ -2,51 +2,51 @@
   {
     "id": "c1",
     "title": "Minimalist MagSafe Stand",
-    "description": "This sleek MagSafe stand holds your device securely at the perfect viewing angle. Crafted from premium aluminum, it seamlessly enhances any modern desktop setup.",
+    "description": "Elevate your workspace aesthetics while keeping your device securely mounted and fully accessible. Crafted with premium materials, this stand offers effortless angle adjustment and seamless magnetic docking.",
     "sellingPrice": 28.99,
     "imageUrl": "https://images.unsplash.com/photo-1586953208448-b95a79798f07",
     "supplierCost": 22,
     "stripeUrl": "#",
-    "paypalUrl": "https://paypal.me/truepriceclub"
+    "paypalUrl": "https://paypal.me/adrivega73/28.99USD"
   },
   {
     "id": "c2",
     "title": "Ergonomic Desk Cushion",
-    "description": "Improve your posture and daily comfort with this high-density ergonomic memory foam cushion. Designed to alleviate lower back pressure, it fits virtually any office chair effortlessly.",
+    "description": "Improve your posture and alleviate lower back fatigue during long work sessions with high-density memory foam support. The breathable cover ensures long-lasting comfort throughout your busiest days.",
     "sellingPrice": 24.99,
     "imageUrl": "https://images.unsplash.com/photo-1580481077195-c22ae98767e3",
     "supplierCost": 18.5,
     "stripeUrl": "#",
-    "paypalUrl": "https://paypal.me/truepriceclub"
+    "paypalUrl": "https://paypal.me/adrivega73/24.99USD"
   },
   {
     "id": "c3",
     "title": "Precision Coffee Scale",
-    "description": "Achieve the perfect pour-over brew every morning with fast-response high-precision sensors. The built-in digital timer and clear display make measuring your coffee extra simple.",
+    "description": "Achieve the perfect pour-over extraction every morning with accurate weight measurements down to the tenth of a gram. An integrated timer and responsive digital display ensure consistent brewing results every time.",
     "sellingPrice": 32.99,
     "imageUrl": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd",
     "supplierCost": 25,
     "stripeUrl": "#",
-    "paypalUrl": "https://paypal.me/truepriceclub"
+    "paypalUrl": "https://paypal.me/adrivega73/32.99USD"
   },
   {
     "id": "c4",
     "title": "Slim Magnetic Battery Pack",
-    "description": "Keep your phone charged on the go with this compact and lightweight magnetic power bank. Strong built-in magnets ensure uninterrupted wireless charging wherever your day takes you.",
+    "description": "Keep your smartphone powered on the go with this sleek and lightweight wireless power bank. Strong built-in magnets snap firmly in place for reliable, pocket-friendly charging anywhere.",
     "sellingPrice": 24.99,
     "imageUrl": "https://images.unsplash.com/photo-1609592424300-c917b254a6db",
     "supplierCost": 19,
     "stripeUrl": "#",
-    "paypalUrl": "https://paypal.me/truepriceclub"
+    "paypalUrl": "https://paypal.me/adrivega73/24.99USD"
   },
   {
     "id": "c5",
     "title": "Smart RGB Monitor Bar",
-    "description": "Illuminate your workspace without screen glare using this customizable smart monitor light bar. Choose from multiple dynamic RGB backlighting modes to match your mood and setup.",
+    "description": "Illuminate your desktop without screen glare using customizable ambient lighting presets and intuitive touch controls. It neatly mounts to your monitor to save valuable desk space and reduce nighttime eye strain.",
     "sellingPrice": 45.99,
     "imageUrl": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46",
     "supplierCost": 35,
     "stripeUrl": "#",
-    "paypalUrl": "https://paypal.me/truepriceclub"
+    "paypalUrl": "https://paypal.me/adrivega73/45.99USD"
   }
 ]
