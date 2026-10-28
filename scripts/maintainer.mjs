@@ -17,7 +17,7 @@ const candidateFeed = [
 async function run() {
   const prompt = "Select 5 top products. Set sellingPrice to cost * 1.30 rounded to .99. Write a 2-sentence description.";
   const res = await ai.models.generateContent({
-    model: "gemini-2.5-flash",
+    model: "gemini-3.8-flash",
     contents: [{ text: prompt }, { text: JSON.stringify(candidateFeed) }],
     config: {
       responseMimeType: "application/json",
