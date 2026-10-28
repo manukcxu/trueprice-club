@@ -41,7 +41,7 @@ async function run() {
   const selected = JSON.parse(res.text);
   for (const item of selected) {
     item.stripeUrl = "#";
-    item.paypalUrl = "https://paypal.me/truepriceclub";
+    item.paypalUrl = `https://paypal.me/adrivega73/${item.sellingPrice.toFixed(2)}USD`;
   }
   await fs.writeFile(path.resolve("src/data/products.json"), JSON.stringify(selected, null, 2));
   console.log("src/data/products.json refreshed!");
