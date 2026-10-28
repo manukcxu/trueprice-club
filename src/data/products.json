@@ -1,0 +1,52 @@
+[
+  {
+    "id": "item-1",
+    "title": "Minimalist MagSafe Charging Stand",
+    "description": "Aircraft-grade aluminum multi-device charging station. Fast 15W wireless output with magnetic alignment.",
+    "supplierCost": 22,
+    "sellingPrice": 28.99,
+    "imageUrl": "https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&w=800&q=80",
+    "stripeUrl": "https://buy.stripe.com/test_placeholder_1",
+    "paypalUrl": "https://www.paypal.com/ncp/payment/placeholder1"
+  },
+  {
+    "id": "item-2",
+    "title": "Ergonomic Under-Desk Footrest Cushion",
+    "description": "High-density memory foam angled support to relieve lower back tension and improve circulation during long desk sessions.",
+    "supplierCost": 18.5,
+    "sellingPrice": 24.99,
+    "imageUrl": "https://images.unsplash.com/photo-1580481077195-c22ae98767e3?auto=format&fit=crop&w=800&q=80",
+    "stripeUrl": "https://buy.stripe.com/test_placeholder_2",
+    "paypalUrl": "https://www.paypal.com/ncp/payment/placeholder2"
+  },
+  {
+    "id": "item-3",
+    "title": "Portable Precision Espresso Scale",
+    "description": "Accurate to 0.1g with integrated flow rate tracking and auto-timer for pour-overs and espresso extractions.",
+    "supplierCost": 25,
+    "sellingPrice": 32.99,
+    "imageUrl": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80",
+    "stripeUrl": "https://buy.stripe.com/test_placeholder_3",
+    "paypalUrl": "https://www.paypal.com/ncp/payment/placeholder3"
+  },
+  {
+    "id": "item-4",
+    "title": "Ultra-Slim USB-C Magnetic Power Bank",
+    "description": "5,000mAh slim pocket battery pack with pass-through fast charging and secure magnetic snap-on hold.",
+    "supplierCost": 19,
+    "sellingPrice": 24.99,
+    "imageUrl": "https://images.unsplash.com/photo-1609592424300-c917b254a6db?auto=format&fit=crop&w=800&q=80",
+    "stripeUrl": "https://buy.stripe.com/test_placeholder_4",
+    "paypalUrl": "https://www.paypal.com/ncp/payment/placeholder4"
+  },
+  {
+    "id": "item-5",
+    "title": "Smart Ambient RGB Screen Light Bar",
+    "description": "Zero screen-glare monitor lamp with dynamic back-glow lighting and wireless rotary desktop dial control.",
+    "supplierCost": 35,
+    "sellingPrice": 45.99,
+    "imageUrl": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=800&q=80",
+    "stripeUrl": "https://buy.stripe.com/test_placeholder_5",
+    "paypalUrl": "https://www.paypal.com/ncp/payment/placeholder5"
+  }
+]

@@ -1,16 +1,99 @@
 ---
+import products from '../data/products.json';
+import '../styles/global.css';
 ---
 
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, 1.0" />
+    <title>TruePrice Club | Weekly Top 5 Curated Picks</title>
+    <meta name="description" content="Direct transparent pricing on this week top 5 trending essentials." />
+  </head>
+  <body class="bg-neutral-950 text-neutral-100 min-h-screen antialiased flex flex-col justify-between">
+    <!-- Header -->
+    <header class="border-b border-neutral-800 bg-neutral-900/60 backdrop-blur sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <div class="h-3 w-3 rounded-full bg-emerald-400 animate-pulse"></div>
+          <span class="font-extrabold tracking-tight text-xl">trueprice<span class="text-emerald-400">.club</span></span>
+        </div>
+        <div class="text-xs text-neutral-400 font-mono border border-neutral-700/80 px-3 py-1 rounded-full">
+          Refreshed Weekly • Top 5 Drops
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <main class="max-w-6xl mx-auto px-6 py-12 flex-1 w-full">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <h1 class="text-4xl sm:text-5xl font-black tracking-tight mb-4">
+          The Weekly 5. <br class="hidden sm:inline" />No Fluff, Just True Value.
+        </h1>
+        <p class="text-neutral-400 text-sm sm:text-base leading-relaxed">
+          Every week our automated sourcing engine curates the 5 highest-demand trending products, cuts out retail markups, and locks in fair, transparent prices.
+        </p>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {products.map((item, index) => (
+          <article class="bg-neutral-900/80 border border-neutral-800 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-neutral-700 transition duration-300">
+            <div>
+              <div class="relative h-64 w-full bg-neutral-800 overflow-hidden">
+                <img 
+                  src={item.imageUrl} 
+                  alt={item.title} 
+                  loading="lazy"
+                  class="w-full h-full object-cover hover:scale-105 transition duration-500" 
+                />
+                <span class="absolute top-3 left-3 bg-neutral-950/80 backdrop-blur border border-neutral-800 text-neutral-200 text-xs font-mono font-bold px-2.5 py-1 rounded-lg">
+                  #{index + 1} Trending
+                </span>
+              </div>
+              <div class="p-6">
+                <h2 class="text-lw font-bold text-neutral-100 mb-2">{item.title}</h2>
+                <p class="text-sm text-neutral-400 leading-relaxed">{item.description}</p>
+              </div>
+            </div>
+
+            <div class="p-6 pt-0 border-t border-neutral-800/60 mt-4">
+              <div class="flex items-baseline justify-between mb-4 pt-4">
+                <span class="text-xs font-mono uppercase tracking-wider text-neutral-500">True Price</span>
+                <span class="text-2xl font-black text-emerald-400">${item.sellingPrice.toFixed(2)}</span>
+              </div>
+              
+              <div class="grid grid-cols-2 gap-3">
+                <a 
+                  href={item.stripeUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="bg-emerald-500 hover:bg-emerald-400 text-neutral-950 font-bold text-xs py-2.5 px-3 rounded-xl text-center transition flex items-center justify-center gap-1.5"
+                >
+                  Pay with Card
+                </a>
+                <a 
+                  href={item.paypalUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="bg-neutral-800 hover:bg-neutral-700 text-neutral-200 font-semibold text-xs py-2.5 px-3 rounded-xl text-center transition flex items-center justify-center border border-neutral-700"
+                >
+                  PayPal
+                </a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-neutral-900 bg-neutral-950 py-8 text-center text-xs text-neutral-500">
+      <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <span>&copy; {new Date().getFullYear()} trueprice.club. All rights reserved.</span>
+        <span>Curated with automated market discovery • Transparent 30% margin</span>
+      </div>
+    </footer>
+  </body>
 </html>
