@@ -2,7 +2,7 @@
   {
     "id": "c1",
     "title": "Minimalist MagSafe Stand",
-    "description": "Elevate your workspace with this sleek, precision-crafted magnetic charging stand. It securely holds your device at the optimal viewing angle for seamless multitasking.",
+    "description": "This sleek MagSafe stand holds your device securely at the perfect viewing angle. Crafted from premium aluminum, it seamlessly enhances any modern desktop setup.",
     "sellingPrice": 28.99,
     "imageUrl": "https://images.unsplash.com/photo-1586953208448-b95a79798f07",
     "supplierCost": 22,
@@ -12,7 +12,7 @@
   {
     "id": "c2",
     "title": "Ergonomic Desk Cushion",
-    "description": "Experience all-day comfort with high-density memory foam designed to relieve pressure points. Its breathable cover ensures optimal airflow during long working hours.",
+    "description": "Improve your posture and daily comfort with this high-density ergonomic memory foam cushion. Designed to alleviate lower back pressure, it fits virtually any office chair effortlessly.",
     "sellingPrice": 24.99,
     "imageUrl": "https://images.unsplash.com/photo-1580481077195-c22ae98767e3",
     "supplierCost": 18.5,
@@ -22,7 +22,7 @@
   {
     "id": "c3",
     "title": "Precision Coffee Scale",
-    "description": "Achieve the perfect brew consistency with rapid response times and high-precision sensors. The integrated timer and clear digital display make pour-overs effortless.",
+    "description": "Achieve the perfect pour-over brew every morning with fast-response high-precision sensors. The built-in digital timer and clear display make measuring your coffee extra simple.",
     "sellingPrice": 32.99,
     "imageUrl": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd",
     "supplierCost": 25,
@@ -32,7 +32,7 @@
   {
     "id": "c4",
     "title": "Slim Magnetic Battery Pack",
-    "description": "Snap on instant power without the hassle of tangled cables or bulky accessories. Its ultra-compact profile slips easily into your pocket for convenient on-the-go charging.",
+    "description": "Keep your phone charged on the go with this compact and lightweight magnetic power bank. Strong built-in magnets ensure uninterrupted wireless charging wherever your day takes you.",
     "sellingPrice": 24.99,
     "imageUrl": "https://images.unsplash.com/photo-1609592424300-c917b254a6db",
     "supplierCost": 19,
@@ -42,7 +42,7 @@
   {
     "id": "c5",
     "title": "Smart RGB Monitor Bar",
-    "description": "Reduce screen glare while illuminating your desk with customizable dynamic backlighting. Touch controls allow you to switch color temperatures seamlessly to suit any task.",
+    "description": "Illuminate your workspace without screen glare using this customizable smart monitor light bar. Choose from multiple dynamic RGB backlighting modes to match your mood and setup.",
     "sellingPrice": 45.99,
     "imageUrl": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46",
     "supplierCost": 35,
