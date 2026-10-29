@@ -8,8 +8,14 @@ const __dirname = path.dirname(__filename);
 const productsPath = path.resolve(__dirname, '../src/data/products.json');
 
 const AMAZON_TAG = process.env.AMAZON_ASSOCIATE_TAG || 'adridiscounts-20';
+const apiKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_GENAI_API_KEY;
 
-const ai = new GoogleGenAI();
+if (!apiKey) {
+  console.error('Error: GEMINI_API_KEY environment variable is missing.');
+  process.exit(1);
+}
+
+const ai = new GoogleGenAI({ apiKey });
 
 async function run() {
   console.log('Fetching trending Amazon bestsellers in high-commission tiers...');
@@ -46,7 +52,7 @@ Respond with ONLY valid JSON formatted as an array of 5 objects:
 `;
 
   const response = await ai.models.generateContent({
-    model: 'gemini-3.8-flash',
+    model: 'gemini-2.5-flash',
     contents: prompt,
     config: {
       responseMimeType: 'application/json',
@@ -70,4 +76,3 @@ run().catch((err) => {
   console.error('Maintainer script error:', err);
   process.exit(1);
 });
-

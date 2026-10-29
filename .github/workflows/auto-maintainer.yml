@@ -6,20 +6,26 @@ on:
 jobs:
   maintain:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     permissions:
       contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/setup-node@v4
         with:
           node-version: 22
       - run: npm ci
-      - env:
+      - name: Run maintainer script
+        env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
+          GOOGLE_GENAI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          AMAZON_ASSOCIATE_TAG: "adridiscounts-20"
         run: node scripts/maintainer.mjs
-      - run: |
+      - name: Commit and push changes
+        run: |
           git config --global user.name "trueprice-bot"
           git config --global user.email "bot@users.noreply.github.com"
           git add src/data/products.json
-          git diff --staged --quiet || (git commit -m "chore: auto-update top 5 products [30% markup]" && git push)
+          git diff --staged --quiet || (git commit -m "chore: auto-update top 5 amazon affiliate products [adridiscounts-20]" && git push origin main)
