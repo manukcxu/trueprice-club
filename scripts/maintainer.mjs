@@ -1,49 +1,75 @@
-import { GoogleGenAI, Type } from "@google/genai";
-import Stripe from "stripe";
-import fs from "node:fs/promises";
-import path from "node:path";
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { GoogleGenAI } from '@google/genai';
 
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
-const stripe = process.env.STRIPE_SECRET_KEY ? new Stripe(process.env.STRIPE_SECRET_KEY) : null;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const productsPath = path.resolve(__dirname, '../src/data/products.json');
 
-const candidateFeed = [
-  { id: "c1", title: "Minimalist MagSafe Stand", cost: 22.0, image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07" },
-  { id: "c2", title: "Ergonomic Desk Cushion", cost: 18.5, image: "https://images.unsplash.com/photo-1580481077195-c22ae98767e3" },
-  { id: "c3", title: "Precision Coffee Scale", cost: 25.0, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd" },
-  { id: "c4", title: "Slim Magnetic Battery Pack", cost: 19.0, image: "https://images.unsplash.com/photo-1609592424300-c917b254a6db" },
-  { id: "c5", title: "Smart RGB Monitor Bar", cost: 35.0, image: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46" }
-];
+const AMAZON_TAG = process.env.AMAZON_ASSOCIATE_TAG || 'adridiscounts-20';
+
+const ai = new GoogleGenAI();
 
 async function run() {
-  const prompt = "Select 5 top products. Set sellingPrice to cost * 1.30 rounded to .99. Write a 2-sentence description.";
-  const res = await ai.models.generateContent({
-    model: "gemini-3.8-flash",
-    contents: [{ text: prompt }, { text: JSON.stringify(candidateFeed) }],
-    config: {
-      responseMimeType: "application/json",
-      responseSchema: {
-        type: Type.ARRAY,
-        items: {
-          type: Type.OBJECT,
-          properties: {
-            id: { type: Type.STRING },
-            title: { type: Type.STRING },
-            description: { type: Type.STRING },
-            supplierCost: { type: Type.NUMBER },
-            sellingPrice: { type: Type.NUMBER },
-            imageUrl: { type: Type.STRING }
-          },
-          required: ["id", "title", "description", "sellingPrice", "imageUrl"]
-        }
-      }
-    }
-  });
-  const selected = JSON.parse(res.text);
-  for (const item of selected) {
-    item.stripeUrl = "#";
-    item.paypalUrl = `https://paypal.me/adrivega73/${item.sellingPrice.toFixed(2)}USD`;
+  console.log('Fetching trending Amazon bestsellers in high-commission tiers...');
+
+  const prompt = `
+You are the product curator for trueprice.club.
+Generate a JSON array of exactly 5 real, trending, top-selling products currently available on Amazon.
+
+CRITICAL SELECTION CRITERIA:
+1. Target ONLY products from Amazon's highest commission tiers:
+   - Luxury Beauty / Skincare Devices / Grooming (10% commission)
+   - Kitchen Essentials / Premium Coffee & Culinary Gear (4.5% commission)
+   - High-demand Automotive Care / Smart Home Devices (4% - 4.5% commission)
+2. Every product MUST be a verified, high-volume bestseller with real customer demand.
+3. Every product MUST include its authentic 10-character Amazon ASIN (e.g., "B08N5WRWNW").
+4. Choose items with average selling prices between $35 and $250 to maximize dollar earnings per referral.
+
+Respond with ONLY valid JSON formatted as an array of 5 objects with these keys:
+[
+  {
+    "id": "item-1",
+    "asin": "B0XXXXXXXX",
+    "title": "Exact Product Name",
+    "category": "Luxury Beauty | Kitchen | Smart Home",
+    "regularPrice": 129.99,
+    "sellingPrice": 99.99,
+    "commissionTier": "10% Commission",
+    "image": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=600&q=80",
+    "features": [
+      "Key highlight 1",
+      "Key highlight 2",
+      "Key highlight 3"
+    ],
+    "description": "Short 1-2 sentence compelling reason to buy."
   }
-  await fs.writeFile(path.resolve("src/data/products.json"), JSON.stringify(selected, null, 2));
-  console.log("src/data/products.json refreshed!");
+]
+`;
+
+  const response = await ai.models.generateContent({
+    model: 'gemini-3.8-flash',
+    contents: prompt,
+    config: {
+      responseMimeType: 'application/json',
+    },
+  });
+
+  const rawJson = response.text;
+  const products = JSON.parse(rawJson);
+
+  const updatedProducts = products.map((item) => ({
+    ...item,
+    affiliateUrl: `https://www.amazon.com/dp/${item.asin}?tag=${AMAZON_TAG}`,
+  }));
+
+  await fs.writeFile(productsPath, JSON.stringify(updatedProducts, null, 2), 'utf-8');
+  console.log(`Successfully updated ${updatedProducts.length} Amazon products with tag ${AMAZON_TAG}`);
 }
-run();
+
+run().catch((err) => {
+  console.error('Maintainer script error:', err);
+  process.exit(1);
+});
+

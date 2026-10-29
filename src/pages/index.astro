@@ -63,23 +63,17 @@ import '../styles/global.css';
                 <span class="text-xs font-mono uppercase tracking-wider text-neutral-500">True Price</span>
                 <span class="text-2xl font-black text-emerald-400">${item.sellingPrice.toFixed(2)}</span>
               </div>
-              
-              <div class="grid grid-cols-2 gap-3">
+              <div>
                 <a 
-                  href={item.stripeUrl} 
+                  href={item.affiliateUrl || item.paypalUrl} 
                   target="_blank" 
-                  rel="noopener noreferrer"
-                  class="bg-emerald-500 hover:bg-emerald-400 text-neutral-950 font-bold text-xs py-2.5 px-3 rounded-xl text-center transition flex items-center justify-center gap-1.5"
+                  rel="nofollow noopener sponsored"
+                  class="w-full bg-amber-400 hover:bg-amber-300 text-neutral-950 font-bold text-sm py-3 px-4 rounded-xl text-center transition flex items-center justify-center gap-2 shadow-sm"
                 >
-                  Pay with Card
-                </a>
-                <a 
-                  href={item.paypalUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  class="bg-neutral-800 hover:bg-neutral-700 text-neutral-200 font-semibold text-xs py-2.5 px-3 rounded-xl text-center transition flex items-center justify-center border border-neutral-700"
-                >
-                  PayPal
+                  <span>Check Price on Amazon</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h6V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-6h-2v6H5V5z"/>
+                  </svg>
                 </a>
               </div>
             </div>
@@ -87,12 +81,16 @@ import '../styles/global.css';
         ))}
       </div>
     </main>
-
     <!-- Footer -->
-    <footer class="border-t border-neutral-900 bg-neutral-950 py-8 text-center text-xs text-neutral-500">
-      <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <span>&copy; {new Date().getFullYear()} trueprice.club. All rights reserved.</span>
-        <span>Curated with automated market discovery • Transparent 30% margin</span>
+    <footer class="border-t border-neutral-900 bg-neutral-950 py-8 text-xs text-neutral-500">
+      <div class="max-w-6xl mx-auto px-6 flex flex-col gap-4 text-center">
+        <p class="text-neutral-400 text-xs max-w-3xl mx-auto leading-relaxed">
+          As an Amazon Associate I earn from qualifying purchases. Product prices and availability are accurate as of the date/time indicated and are subject to change.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-2 border-t border-neutral-900 pt-4">
+          <span>&copy; {new Date().getFullYear()} trueprice.club. All rights reserved.</span>
+          <span>Curated Amazon Bestsellers & Top Commission Discoveries</span>
+        </div>
       </div>
     </footer>
   </body>
