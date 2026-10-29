@@ -1,7 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { GoogleGenAI } from '@google/genai';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -11,16 +10,14 @@ const AMAZON_TAG = process.env.AMAZON_ASSOCIATE_TAG || 'adridiscounts-20';
 const apiKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_GENAI_API_KEY;
 
 if (!apiKey) {
-  console.error('Error: GEMINI_API_KEY environment variable is missing.');
+  console.error('CRITICAL: GEMINI_API_KEY environment variable is missing.');
   process.exit(1);
 }
 
-const ai = new GoogleGenAI({ apiKey });
-
 async function run() {
-  console.log('Fetching trending Amazon bestsellers in high-commission tiers...');
+  console.log('Querying Gemini API via direct REST endpoint...');
 
-  const prompt = `
+  const promptText = `
 You are the product curator for trueprice.club.
 Generate a JSON array of exactly 5 real, trending, top-selling products currently available on Amazon US.
 
@@ -51,15 +48,33 @@ Respond with ONLY valid JSON formatted as an array of 5 objects:
 ]
 `;
 
-  const response = await ai.models.generateContent({
-    model: 'gemini-2.5-flash',
-    contents: prompt,
-    config: {
-      responseMimeType: 'application/json',
-    },
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      contents: [{ parts: [{ text: promptText }] }],
+      generationConfig: {
+        responseMimeType: 'application/json'
+      }
+    })
   });
 
-  const rawJson = response.text;
+  if (!res.ok) {
+    const errorBody = await res.text();
+    console.error(`Gemini API HTTP Error (${res.status} ${res.statusText}):\n${errorBody}`);
+    process.exit(1);
+  }
+
+  const data = await res.json();
+  const rawJson = data.candidates?.[0]?.content?.parts?.[0]?.text;
+
+  if (!rawJson) {
+    console.error('Empty response structure from Gemini:', JSON.stringify(data, null, 2));
+    process.exit(1);
+  }
+
   const products = JSON.parse(rawJson);
 
   const updatedProducts = products.map((item) => ({
@@ -69,10 +84,10 @@ Respond with ONLY valid JSON formatted as an array of 5 objects:
   }));
 
   await fs.writeFile(productsPath, JSON.stringify(updatedProducts, null, 2), 'utf-8');
-  console.log(`Successfully updated ${updatedProducts.length} Amazon products with tag ${AMAZON_TAG}`);
+  console.log(`SUCCESS: Updated ${updatedProducts.length} Amazon products with tag ${AMAZON_TAG}`);
 }
 
 run().catch((err) => {
-  console.error('Maintainer script error:', err);
+  console.error('Unexpected execution error:', err);
   process.exit(1);
 });
