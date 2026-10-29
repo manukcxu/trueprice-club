@@ -1,52 +1,87 @@
 [
   {
-    "id": "c1",
-    "title": "Minimalist MagSafe Stand",
-    "description": "Elevate your workspace aesthetics while keeping your device securely mounted and fully accessible. Crafted with premium materials, this stand offers effortless angle adjustment and seamless magnetic docking.",
-    "sellingPrice": 28.99,
-    "imageUrl": "https://images.unsplash.com/photo-1586953208448-b95a79798f07",
-    "supplierCost": 22,
-    "stripeUrl": "#",
-    "paypalUrl": "https://paypal.me/adrivega73/28.99USD"
+    "id": "item-1",
+    "asin": "B00GNW5JHQ",
+    "title": "NuFACE Mini Starter Kit - Facial Toning Device",
+    "category": "Luxury Beauty",
+    "regularPrice": 220,
+    "sellingPrice": 165,
+    "commissionTier": "10% Commission",
+    "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80",
+    "features": [
+      "Microcurrent technology stimulates facial muscles for an instant lift",
+      "FDA-cleared, non-invasive contouring treatment",
+      "Travel-friendly design with included hydrating leave-on gel primer"
+    ],
+    "description": "Clinically proven to improve facial contour and tone in as little as five minutes a day.",
+    "affiliateUrl": "https://www.amazon.com/dp/B00GNW5JHQ?tag=adridiscounts-20"
   },
   {
-    "id": "c2",
-    "title": "Ergonomic Desk Cushion",
-    "description": "Improve your posture and alleviate lower back fatigue during long work sessions with high-density memory foam support. The breathable cover ensures long-lasting comfort throughout your busiest days.",
-    "sellingPrice": 24.99,
-    "imageUrl": "https://images.unsplash.com/photo-1580481077195-c22ae98767e3",
-    "supplierCost": 18.5,
-    "stripeUrl": "#",
-    "paypalUrl": "https://paypal.me/adrivega73/24.99USD"
+    "id": "item-2",
+    "asin": "B00325D04C",
+    "title": "Grande Cosmetics GrandeLASH-MD Lash Enhancing Serum",
+    "category": "Luxury Beauty",
+    "regularPrice": 68,
+    "sellingPrice": 49.99,
+    "commissionTier": "10% Commission",
+    "image": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=600&q=80",
+    "features": [
+      "Award-winning peptide and amino-acid enriched formulation",
+      "Promotes the appearance of naturally longer, thicker-looking lashes in 4-6 weeks",
+      "Ophthalmologist-tested and safe for contact lens wearers"
+    ],
+    "description": "The gold-standard lash serum trusted by millions for visible, dramatic lash transformation.",
+    "affiliateUrl": "https://www.amazon.com/dp/B00325D04C?tag=adridiscounts-20"
   },
   {
-    "id": "c3",
-    "title": "Precision Coffee Scale",
-    "description": "Achieve the perfect pour-over extraction every morning with accurate weight measurements down to the tenth of a gram. An integrated timer and responsive digital display ensure consistent brewing results every time.",
-    "sellingPrice": 32.99,
-    "imageUrl": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd",
-    "supplierCost": 25,
-    "stripeUrl": "#",
-    "paypalUrl": "https://paypal.me/adrivega73/32.99USD"
+    "id": "item-3",
+    "asin": "B077JBQZPX",
+    "title": "Fellow Stagg EKG Electric Gooseneck Kettle",
+    "category": "Kitchen",
+    "regularPrice": 195,
+    "sellingPrice": 165,
+    "commissionTier": "4.5% Commission",
+    "image": "https://images.unsplash.com/photo-1517668808822-9ebd02f2a888?auto=format&fit=crop&w=600&q=80",
+    "features": [
+      "Precision fluted pour spout for optimal flow rate balance",
+      "Variable temperature control from 135°F to 212°F with LCD readout",
+      "60-minute temperature hold mode for continuous brewing"
+    ],
+    "description": "The minimalist, barista-approved electric kettle that unlocks the full flavor profile of specialty pour-over coffee.",
+    "affiliateUrl": "https://www.amazon.com/dp/B077JBQZPX?tag=adridiscounts-20"
   },
   {
-    "id": "c4",
-    "title": "Slim Magnetic Battery Pack",
-    "description": "Keep your smartphone powered on the go with this sleek and lightweight wireless power bank. Strong built-in magnets snap firmly in place for reliable, pocket-friendly charging anywhere.",
-    "sellingPrice": 24.99,
-    "imageUrl": "https://images.unsplash.com/photo-1609592424300-c917b254a6db",
-    "supplierCost": 19,
-    "stripeUrl": "#",
-    "paypalUrl": "https://paypal.me/adrivega73/24.99USD"
+    "id": "item-4",
+    "asin": "B07FDJMC9Q",
+    "title": "Ninja AF101 4-Quart Air Fryer",
+    "category": "Kitchen",
+    "regularPrice": 129.99,
+    "sellingPrice": 89.99,
+    "commissionTier": "4.5% Commission",
+    "image": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80",
+    "features": [
+      "Uses up to 75% less fat than traditional deep-frying methods",
+      "Versatile 4-in-1 functionality: Air Fry, Roast, Reheat, and Dehydrate",
+      "Ceramic-coated nonstick basket fits 2 lbs of french fries"
+    ],
+    "description": "Amazon's perennial top-selling air fryer that delivers crispy, guilt-free meals in under 20 minutes.",
+    "affiliateUrl": "https://www.amazon.com/dp/B07FDJMC9Q?tag=adridiscounts-20"
   },
   {
-    "id": "c5",
-    "title": "Smart RGB Monitor Bar",
-    "description": "Illuminate your desktop without screen glare using customizable ambient lighting presets and intuitive touch controls. It neatly mounts to your monitor to save valuable desk space and reduce nighttime eye strain.",
-    "sellingPrice": 45.99,
-    "imageUrl": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46",
-    "supplierCost": 35,
-    "stripeUrl": "#",
-    "paypalUrl": "https://paypal.me/adrivega73/45.99USD"
+    "id": "item-5",
+    "asin": "B09XXS48NB",
+    "title": "ecobee Smart Thermostat Premium with Air Quality Monitor",
+    "category": "Smart Home",
+    "regularPrice": 249.99,
+    "sellingPrice": 219.99,
+    "commissionTier": "4% Commission",
+    "image": "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=600&q=80",
+    "features": [
+      "Built-in indoor air quality monitor with clean air alerts",
+      "Included SmartSensor eliminates cold and hot spots across rooms",
+      "Integrated Siri and Alexa voice control with brushed zinc design"
+    ],
+    "description": "Saves homeowners up to 26% on heating and cooling costs while functioning as an ultra-sleek smart home command hub.",
+    "affiliateUrl": "https://www.amazon.com/dp/B09XXS48NB?tag=adridiscounts-20"
   }
 ]
