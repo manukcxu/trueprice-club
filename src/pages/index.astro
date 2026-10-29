@@ -46,7 +46,10 @@ import '../styles/global.css';
                   src={item.image} 
                   alt={item.title} 
                   loading="lazy" 
-                  class="w-full h-48 object-contain bg-white/5 rounded-lg p-2" 
+                  referrerpolicy="no-referrer"
+                  crossorigin="anonymous"
+                  class="w-full h-full object-contain p-4 bg-white/5" 
+                  onerror="if (!this.dataset.tried) { this.dataset.tried = 1; this.src = `https://images-na.ssl-images-amazon.com/images/P/${item.asin}.MAIN._SCLZZZZZZZ_SX500_.jpg`; } else { this.src = `https://placehold.co/600x400/1e293b/94a3b8?text=${encodeURIComponent(item.title.slice(0, 20))}`; }"
                 />
 
                 <span class="absolute top-3 left-3 bg-neutral-950/80 backdrop-blur border border-neutral-800 text-neutral-200 text-xs font-mono font-bold px-2.5 py-1 rounded-lg">

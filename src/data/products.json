@@ -1,87 +1,82 @@
 [
   {
     "id": "item-1",
-    "asin": "B00GNW5JHQ",
-    "title": "NuFACE Mini Starter Kit - Facial Toning Device",
+    "asin": "B001MA0QY2",
+    "title": "Olaplex No. 3 Hair Perfector Repairing Treatment",
     "category": "Luxury Beauty",
-    "regularPrice": 220,
-    "sellingPrice": 165,
-    "commissionTier": "10% Commission",
-    "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80",
+    "priceRange": "$28 - $32",
+    "commissionTier": "Top Pick (10% Tier)",
     "features": [
-      "Microcurrent technology stimulates facial muscles for an instant lift",
-      "FDA-cleared, non-invasive contouring treatment",
-      "Travel-friendly design with included hydrating leave-on gel primer"
+      "Repairs damaged and compromised hair",
+      "Strengthens and protects hair structure",
+      "Restores healthy appearance and texture"
     ],
-    "description": "Clinically proven to improve facial contour and tone in as little as five minutes a day.",
-    "affiliateUrl": "https://www.amazon.com/dp/B00GNW5JHQ?tag=adridiscounts-20"
+    "description": "The gold-standard at-home bond builder that dramatically improves hair strength and texture.",
+    "image": "https://images-na.ssl-images-amazon.com/images/P/B001MA0QY2.01._SCLZZZZZZZ_SX500_.jpg",
+    "affiliateUrl": "https://www.amazon.com/dp/B001MA0QY2?tag=adridiscounts-20"
   },
   {
     "id": "item-2",
-    "asin": "B00325D04C",
-    "title": "Grande Cosmetics GrandeLASH-MD Lash Enhancing Serum",
-    "category": "Luxury Beauty",
-    "regularPrice": 68,
-    "sellingPrice": 49.99,
-    "commissionTier": "10% Commission",
-    "image": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=600&q=80",
+    "asin": "B00004OCNS",
+    "title": "Lodge 10.25 Inch Pre-Seasoned Cast Iron Skillet",
+    "category": "Kitchen Essentials",
+    "priceRange": "$20 - $25",
+    "commissionTier": "Top Pick (4.5% Tier)",
     "features": [
-      "Award-winning peptide and amino-acid enriched formulation",
-      "Promotes the appearance of naturally longer, thicker-looking lashes in 4-6 weeks",
-      "Ophthalmologist-tested and safe for contact lens wearers"
+      "Even heat retention and distribution",
+      "Pre-seasoned with 100% natural vegetable oil",
+      "Versatile for stovetop, oven, grill, or campfire"
     ],
-    "description": "The gold-standard lash serum trusted by millions for visible, dramatic lash transformation.",
-    "affiliateUrl": "https://www.amazon.com/dp/B00325D04C?tag=adridiscounts-20"
+    "description": "An indestructible kitchen staple with superior heat retention for searing, baking, and frying.",
+    "image": "https://images-na.ssl-images-amazon.com/images/P/B00004OCNS.01._SCLZZZZZZZ_SX500_.jpg",
+    "affiliateUrl": "https://www.amazon.com/dp/B00004OCNS?tag=adridiscounts-20"
   },
   {
     "id": "item-3",
-    "asin": "B077JBQZPX",
-    "title": "Fellow Stagg EKG Electric Gooseneck Kettle",
-    "category": "Kitchen",
-    "regularPrice": 195,
-    "sellingPrice": 165,
-    "commissionTier": "4.5% Commission",
-    "image": "https://images.unsplash.com/photo-1517668808822-9ebd02f2a888?auto=format&fit=crop&w=600&q=80",
+    "asin": "B07984Q8WW",
+    "title": "Philips Sonicare DiamondClean Smart 9500",
+    "category": "Luxury Beauty & Personal Care",
+    "priceRange": "$220 - $260",
+    "commissionTier": "Top Pick (10% Tier)",
     "features": [
-      "Precision fluted pour spout for optimal flow rate balance",
-      "Variable temperature control from 135°F to 212°F with LCD readout",
-      "60-minute temperature hold mode for continuous brewing"
+      "Removes up to 10x more plaque vs a manual brush",
+      "Personalized app coaching and smart sensor technology",
+      "Premium glass charging base and deluxe travel case"
     ],
-    "description": "The minimalist, barista-approved electric kettle that unlocks the full flavor profile of specialty pour-over coffee.",
-    "affiliateUrl": "https://www.amazon.com/dp/B077JBQZPX?tag=adridiscounts-20"
+    "description": "High-performance sonic electric toothbrush providing clinic-level gum and plaque care.",
+    "image": "https://images-na.ssl-images-amazon.com/images/P/B07984Q8WW.01._SCLZZZZZZZ_SX500_.jpg",
+    "affiliateUrl": "https://www.amazon.com/dp/B07984Q8WW?tag=adridiscounts-20"
   },
   {
     "id": "item-4",
-    "asin": "B07FDJMC9Q",
-    "title": "Ninja AF101 4-Quart Air Fryer",
-    "category": "Kitchen",
-    "regularPrice": 129.99,
-    "sellingPrice": 89.99,
-    "commissionTier": "4.5% Commission",
-    "image": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80",
+    "asin": "B08N5WRWNW",
+    "title": "Breville Barista Touch Espresso Machine",
+    "category": "Kitchen Essentials",
+    "priceRange": "$995 - $1050",
+    "commissionTier": "Top Pick (4.5% Tier)",
     "features": [
-      "Uses up to 75% less fat than traditional deep-frying methods",
-      "Versatile 4-in-1 functionality: Air Fry, Roast, Reheat, and Dehydrate",
-      "Ceramic-coated nonstick basket fits 2 lbs of french fries"
+      "Automated touchscreen menu with pre-programmed cafe drinks",
+      "ThermoJet 3-second instant heatup system",
+      "Hands-free microfoam texturing wand"
     ],
-    "description": "Amazon's perennial top-selling air fryer that delivers crispy, guilt-free meals in under 20 minutes.",
-    "affiliateUrl": "https://www.amazon.com/dp/B07FDJMC9Q?tag=adridiscounts-20"
+    "description": "Cafe-grade espresso and microfoam milk drinks automated in a sleek brushed stainless steel chassis.",
+    "image": "https://images-na.ssl-images-amazon.com/images/P/B08N5WRWNW.01._SCLZZZZZZZ_SX500_.jpg",
+    "affiliateUrl": "https://www.amazon.com/dp/B08N5WRWNW?tag=adridiscounts-20"
   },
   {
     "id": "item-5",
-    "asin": "B09XXS48NB",
-    "title": "ecobee Smart Thermostat Premium with Air Quality Monitor",
+    "asin": "B08J45P21V",
+    "title": "ecobee Smart Thermostat Premium with Smart Sensor",
     "category": "Smart Home",
-    "regularPrice": 249.99,
-    "sellingPrice": 219.99,
-    "commissionTier": "4% Commission",
-    "image": "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=600&q=80",
+    "priceRange": "$210 - $250",
+    "commissionTier": "Top Pick (4% Tier)",
     "features": [
-      "Built-in indoor air quality monitor with clean air alerts",
-      "Included SmartSensor eliminates cold and hot spots across rooms",
-      "Integrated Siri and Alexa voice control with brushed zinc design"
+      "Built-in air quality monitor and radar occupancy sensor",
+      "Seamless integration with Apple HomeKit, Alexa, and Google Assistant",
+      "Saves up to 26% on annual heating and cooling costs"
     ],
-    "description": "Saves homeowners up to 26% on heating and cooling costs while functioning as an ultra-sleek smart home command hub.",
-    "affiliateUrl": "https://www.amazon.com/dp/B09XXS48NB?tag=adridiscounts-20"
+    "description": "High-accuracy smart climate controller with integrated indoor air quality monitoring.",
+    "image": "https://images-na.ssl-images-amazon.com/images/P/B08J45P21V.01._SCLZZZZZZZ_SX500_.jpg",
+    "affiliateUrl": "https://www.amazon.com/dp/B08J45P21V?tag=adridiscounts-20"
   }
 ]
