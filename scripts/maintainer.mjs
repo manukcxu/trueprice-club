@@ -16,28 +16,25 @@ async function run() {
 
   const prompt = `
 You are the product curator for trueprice.club.
-Generate a JSON array of exactly 5 real, trending, top-selling products currently available on Amazon.
+Generate a JSON array of exactly 5 real, trending, top-selling products currently available on Amazon US.
 
 CRITICAL SELECTION CRITERIA:
 1. Target ONLY products from Amazon's highest commission tiers:
    - Luxury Beauty / Skincare Devices / Grooming (10% commission)
    - Kitchen Essentials / Premium Coffee & Culinary Gear (4.5% commission)
-   - High-demand Automotive Care / Smart Home Devices (4% - 4.5% commission)
-2. Every product MUST be a verified, high-volume bestseller with real customer demand.
-3. Every product MUST include its authentic 10-character Amazon ASIN (e.g., "B08N5WRWNW").
-4. Choose items with average selling prices between $35 and $250 to maximize dollar earnings per referral.
+   - Automotive Care / Smart Home Devices (4% - 4.5% commission)
+2. Every product MUST have a real, authentic 10-character Amazon ASIN (e.g., "B08N5WRWNW").
+3. Give an estimated price range string (e.g., "$35 - $50" or "$120 - $150").
 
-Respond with ONLY valid JSON formatted as an array of 5 objects with these keys:
+Respond with ONLY valid JSON formatted as an array of 5 objects:
 [
   {
     "id": "item-1",
     "asin": "B0XXXXXXXX",
-    "title": "Exact Product Name",
+    "title": "Exact Clean Product Title",
     "category": "Luxury Beauty | Kitchen | Smart Home",
-    "regularPrice": 129.99,
-    "sellingPrice": 99.99,
-    "commissionTier": "10% Commission",
-    "image": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=600&q=80",
+    "priceRange": "$45 - $65",
+    "commissionTier": "Top Pick",
     "features": [
       "Key highlight 1",
       "Key highlight 2",
@@ -61,6 +58,7 @@ Respond with ONLY valid JSON formatted as an array of 5 objects with these keys:
 
   const updatedProducts = products.map((item) => ({
     ...item,
+    image: `https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&Format=_SL500_&ASIN=${item.asin}&MarketPlace=US&ID=AsinImage&WS=1`,
     affiliateUrl: `https://www.amazon.com/dp/${item.asin}?tag=${AMAZON_TAG}`,
   }));
 

@@ -43,11 +43,12 @@ import '../styles/global.css';
             <div>
               <div class="relative h-64 w-full bg-neutral-800 overflow-hidden">
                 <img 
-                  src={item.imageUrl} 
+                  src={item.image} 
                   alt={item.title} 
-                  loading="lazy"
-                  class="w-full h-full object-cover hover:scale-105 transition duration-500" 
+                  loading="lazy" 
+                  class="w-full h-48 object-contain bg-white/5 rounded-lg p-2" 
                 />
+
                 <span class="absolute top-3 left-3 bg-neutral-950/80 backdrop-blur border border-neutral-800 text-neutral-200 text-xs font-mono font-bold px-2.5 py-1 rounded-lg">
                   #{index + 1} Trending
                 </span>
@@ -59,9 +60,9 @@ import '../styles/global.css';
             </div>
 
             <div class="p-6 pt-0 border-t border-neutral-800/60 mt-4">
-              <div class="flex items-baseline justify-between mb-4 pt-4">
-                <span class="text-xs font-mono uppercase tracking-wider text-neutral-500">True Price</span>
-                <span class="text-2xl font-black text-emerald-400">${item.sellingPrice.toFixed(2)}</span>
+               <div class="flex items-baseline justify-between mb-4 pt-4">
+                <span class="text-xs font-mono uppercase tracking-wider text-neutral-500">Estimated Value</span>
+                <span class="text-lg font-bold text-amber-400">{item.priceRange || (item.sellingPrice ? `$${item.sellingPrice.toFixed(2)}` : 'See on Amazon')}</span>
               </div>
               <div>
                 <a 
