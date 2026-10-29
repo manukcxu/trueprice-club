@@ -16,11 +16,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: npm ci
+      - run: npm install
       - name: Run maintainer script
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GOOGLE_GENAI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           AMAZON_ASSOCIATE_TAG: "adridiscounts-20"
         run: node scripts/maintainer.mjs
       - name: Commit and push changes
