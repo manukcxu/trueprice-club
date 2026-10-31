@@ -275,7 +275,24 @@ import products from "../data/products.json";
 
   <main class="catalog-grid">
     {products.map((item, index) => {
-      const asin = item.asin;
+      const text = ((item.title || "") + " " + (item.description || "")).toLowerCase();
+
+      let modelType = "general";
+      if (text.includes("airtag") || text.includes("tag") && text.includes("apple")) {
+        modelType = "airtag";
+      } else if (text.includes("charger") || text.includes("power") || text.includes("battery") || text.includes("anker")) {
+        modelType = "charger";
+      } else if (text.includes("burt") || text.includes("bees") || text.includes("balm") || text.includes("lip")) {
+        modelType = "lipbalm";
+      } else if (text.includes("fire tv") || text.includes("firetv") || text.includes("streaming") || text.includes("fire stick")) {
+        modelType = "firestick";
+      } else if (text.includes("brita") || text.includes("pitcher") || text.includes("water")) {
+        modelType = "pitcher";
+      } else if (text.includes("dryer") || text.includes("revlon") || text.includes("hair")) {
+        modelType = "dryer";
+      } else if (text.includes("tile") || text.includes("tracker")) {
+        modelType = "tile";
+      }
 
       return (
         <article class="product-card">
@@ -285,7 +302,8 @@ import products from "../data/products.json";
 
             <div class="object-3d-wrapper" data-object>
               
-              {asin === "B08N5WRWNW" && (
+              {/* Apple AirTag */}
+              {modelType === "airtag" && (
                 <svg viewBox="0 0 200 200" class="model-svg">
                   <defs>
                     <radialGradient id={`g-at-metal-${index}`} cx="35%" cy="30%" r="70%">
@@ -307,7 +325,8 @@ import products from "../data/products.json";
                 </svg>
               )}
 
-              {asin === "B07FZ8S74R" && (
+              {/* Anker Portable Charger */}
+              {modelType === "charger" && (
                 <svg viewBox="0 0 200 200" class="model-svg">
                   <defs>
                     <linearGradient id={`g-bat-${index}`} x1="0%" y1="0%" x2="1" y2="1">
@@ -325,46 +344,8 @@ import products from "../data/products.json";
                 </svg>
               )}
 
-              {asin === "B079V3DZ58" && (
-                <svg viewBox="0 0 200 200" class="model-svg">
-                  <defs>
-                    <linearGradient id={`g-dryer-${index}`} x1="0%" y1="0%" x2="1" y2="0">
-                      <stop offset="0%" stop-color="#f43f5e"/>
-                      <stop offset="50%" stop-color="#e11d48"/>
-                      <stop offset="100%" stop-color="#9f1239"/>
-                    </linearGradient>
-                  </defs>
-                  <rect x="62" y="20" width="76" height="76" rx="16" fill="#18181b" stroke="#f43f5e" stroke-width="2.5"/>
-                  <path d="M70 34 H130 M70 48 H130 M70 62 H130 M70 76 H130 M70 90 H130" stroke="#f43f5e" stroke-width="2.5" stroke-linecap="round"/>
-                  <path d="M84 96 L88 175 L112 175 L116 96 Z" fill={`url(#g-dryer-${index})`} stroke="#3f3f46"/>
-                  <rect x="92" y="125" width="16" height="24" rx="4" fill="#18181b"/>
-                </svg>
-              )}
-
-              {asin === "B091H1KPJG" && (
-                <svg viewBox="0 0 200 200" class="model-svg">
-                  <defs>
-                    <linearGradient id={`g-brita-body-${index}`} x1="0%" y1="0%" x2="1" y2="0%">
-                      <stop offset="0%" stop-color="#e0f2fe" stop-opacity="0.7"/>
-                      <stop offset="50%" stop-color="#bae6fd" stop-opacity="0.4"/>
-                      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.6"/>
-                    </linearGradient>
-                    <linearGradient id={`g-brita-water-${index}`} x1="0%" y1="0%" x2="0%" y2="100%">
-                      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.5"/>
-                      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.8"/>
-                    </linearGradient>
-                  </defs>
-                  <path d="M68 55 L75 168 Q78 180 92 180 L128 180 Q142 180 145 168 L152 55 Z" fill={`url(#g-brita-body-${index})`} stroke="#7dd3fc" stroke-width="2"/>
-                  <path d="M73 115 L75 168 Q78 180 92 180 L128 180 Q142 180 145 168 L147 115 Q110 118 73 115 Z" fill={`url(#g-brita-water-${index})`}/>
-                  <path d="M82 60 L85 105 L135 105 L138 60 Z" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
-                  <rect x="100" y="85" width="20" height="25" rx="3" fill="#94a3b8"/>
-                  <path d="M60 55 Q110 42 160 55 L156 64 Q110 52 64 64 Z" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
-                  <path d="M156 54 L168 51 L160 62 Z" fill="#ffffff"/>
-                  <path d="M64 65 C32 75 32 155 72 162" fill="none" stroke="#ffffff" stroke-width="11" stroke-linecap="round"/>
-                </svg>
-              )}
-
-              {asin === "B07XJ8C8F5" && (
+              {/* Burt's Bees Lip Balm */}
+              {modelType === "lipbalm" && (
                 <svg viewBox="0 0 200 200" class="model-svg">
                   <defs>
                     <linearGradient id={`g-bees-body-${index}`} x1="0%" y1="0%" x2="1" y2="0%">
@@ -395,7 +376,73 @@ import products from "../data/products.json";
                 </svg>
               )}
 
-              {asin === "B0756CYWWD" && (
+              {/* Amazon Fire TV Stick 4K */}
+              {modelType === "firestick" && (
+                <svg viewBox="0 0 200 200" class="model-svg">
+                  <defs>
+                    <linearGradient id={`g-stick-${index}`} x1="0%" y1="0%" x2="1" y2="1">
+                      <stop offset="0%" stop-color="#27272a"/>
+                      <stop offset="60%" stop-color="#18181b"/>
+                      <stop offset="100%" stop-color="#09090b"/>
+                    </linearGradient>
+                  </defs>
+                  {/* HDMI Connector */}
+                  <rect x="88" y="24" width="24" height="20" rx="3" fill="#e2e8f0" stroke="#94a3b8"/>
+                  <rect x="92" y="30" width="16" height="4" fill="#64748b"/>
+                  {/* Dongle Body */}
+                  <rect x="72" y="42" width="56" height="135" rx="12" fill={`url(#g-stick-${index})`} stroke="#3f3f46" stroke-width="1.5"/>
+                  {/* 4K Badge */}
+                  <rect x="85" y="70" width="30" height="18" rx="4" fill="#ff9900" opacity="0.95"/>
+                  <text x="100" y="83" fill="#000000" font-size="9" font-weight="900" font-family="sans-serif" text-anchor="middle">4K</text>
+                  {/* Status Indicator */}
+                  <circle cx="100" cy="145" r="3" fill="#ff9900"/>
+                  <text x="100" y="160" fill="#71717a" font-size="7" font-weight="bold" font-family="sans-serif" text-anchor="middle">firetv</text>
+                </svg>
+              )}
+
+              {/* Brita Pitcher */}
+              {modelType === "pitcher" && (
+                <svg viewBox="0 0 200 200" class="model-svg">
+                  <defs>
+                    <linearGradient id={`g-brita-body-${index}`} x1="0%" y1="0%" x2="1" y2="0%">
+                      <stop offset="0%" stop-color="#e0f2fe" stop-opacity="0.7"/>
+                      <stop offset="50%" stop-color="#bae6fd" stop-opacity="0.4"/>
+                      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.6"/>
+                    </linearGradient>
+                    <linearGradient id={`g-brita-water-${index}`} x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.5"/>
+                      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.8"/>
+                    </linearGradient>
+                  </defs>
+                  <path d="M68 55 L75 168 Q78 180 92 180 L128 180 Q142 180 145 168 L152 55 Z" fill={`url(#g-brita-body-${index})`} stroke="#7dd3fc" stroke-width="2"/>
+                  <path d="M73 115 L75 168 Q78 180 92 180 L128 180 Q142 180 145 168 L147 115 Q110 118 73 115 Z" fill={`url(#g-brita-water-${index})`}/>
+                  <path d="M82 60 L85 105 L135 105 L138 60 Z" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+                  <rect x="100" y="85" width="20" height="25" rx="3" fill="#94a3b8"/>
+                  <path d="M60 55 Q110 42 160 55 L156 64 Q110 52 64 64 Z" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+                  <path d="M156 54 L168 51 L160 62 Z" fill="#ffffff"/>
+                  <path d="M64 65 C32 75 32 155 72 162" fill="none" stroke="#ffffff" stroke-width="11" stroke-linecap="round"/>
+                </svg>
+              )}
+
+              {/* Revlon Hair Dryer */}
+              {modelType === "dryer" && (
+                <svg viewBox="0 0 200 200" class="model-svg">
+                  <defs>
+                    <linearGradient id={`g-dryer-${index}`} x1="0%" y1="0%" x2="1" y2="0">
+                      <stop offset="0%" stop-color="#f43f5e"/>
+                      <stop offset="50%" stop-color="#e11d48"/>
+                      <stop offset="100%" stop-color="#9f1239"/>
+                    </linearGradient>
+                  </defs>
+                  <rect x="62" y="20" width="76" height="76" rx="16" fill="#18181b" stroke="#f43f5e" stroke-width="2.5"/>
+                  <path d="M70 34 H130 M70 48 H130 M70 62 H130 M70 76 H130 M70 90 H130" stroke="#f43f5e" stroke-width="2.5" stroke-linecap="round"/>
+                  <path d="M84 96 L88 175 L112 175 L116 96 Z" fill={`url(#g-dryer-${index})`} stroke="#3f3f46"/>
+                  <rect x="92" y="125" width="16" height="24" rx="4" fill="#18181b"/>
+                </svg>
+              )}
+
+              {/* Tile Mate Tracker */}
+              {modelType === "tile" && (
                 <svg viewBox="0 0 200 200" class="model-svg">
                   <defs>
                     <linearGradient id={`g-tile-${index}`} x1="0%" y1="0%" x2="1" y2="1">
@@ -408,6 +455,21 @@ import products from "../data/products.json";
                   <circle cx="70" cy="70" r="12" fill="#10131a" stroke="#cbd5e1" stroke-width="3"/>
                   <circle cx="108" cy="108" r="22" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="1.5"/>
                   <text x="108" y="113" fill="#64748b" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">tile</text>
+                </svg>
+              )}
+
+              {/* General Fallback */}
+              {modelType === "general" && (
+                <svg viewBox="0 0 200 200" class="model-svg">
+                  <defs>
+                    <linearGradient id={`g-gen-${index}`} x1="0%" y1="0%" x2="1" y2="1">
+                      <stop offset="0%" stop-color="#38bdf8"/>
+                      <stop offset="100%" stop-color="#0284c7"/>
+                    </linearGradient>
+                  </defs>
+                  <rect x="55" y="55" width="90" height="90" rx="18" fill={`url(#g-gen-${index})`} stroke="#0369a1" stroke-width="2"/>
+                  <circle cx="100" cy="100" r="22" fill="#ffffff" opacity="0.25"/>
+                  <text x="100" y="105" fill="#ffffff" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">TOP 5</text>
                 </svg>
               )}
 
