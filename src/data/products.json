@@ -1,82 +1,92 @@
 [
   {
     "id": "item-1",
-    "asin": "B001MA0QY2",
-    "title": "Olaplex No. 3 Hair Perfector Repairing Treatment",
-    "category": "Luxury Beauty",
-    "priceRange": "$28 - $32",
-    "commissionTier": "Top Pick (10% Tier)",
-    "features": [
-      "Repairs damaged and compromised hair",
-      "Strengthens and protects hair structure",
-      "Restores healthy appearance and texture"
-    ],
-    "description": "The gold-standard at-home bond builder that dramatically improves hair strength and texture.",
-    "image": "https://images-na.ssl-images-amazon.com/images/P/B001MA0QY2.01._SCLZZZZZZZ_SX500_.jpg",
-    "affiliateUrl": "https://www.amazon.com/dp/B001MA0QY2?tag=adridiscounts-20"
-  },
-  {
-    "id": "item-2",
-    "asin": "B00004OCNS",
-    "title": "Lodge 10.25 Inch Pre-Seasoned Cast Iron Skillet",
-    "category": "Kitchen Essentials",
-    "priceRange": "$20 - $25",
-    "commissionTier": "Top Pick (4.5% Tier)",
-    "features": [
-      "Even heat retention and distribution",
-      "Pre-seasoned with 100% natural vegetable oil",
-      "Versatile for stovetop, oven, grill, or campfire"
-    ],
-    "description": "An indestructible kitchen staple with superior heat retention for searing, baking, and frying.",
-    "image": "https://images-na.ssl-images-amazon.com/images/P/B00004OCNS.01._SCLZZZZZZZ_SX500_.jpg",
-    "affiliateUrl": "https://www.amazon.com/dp/B00004OCNS?tag=adridiscounts-20"
-  },
-  {
-    "id": "item-3",
-    "asin": "B07984Q8WW",
-    "title": "Philips Sonicare DiamondClean Smart 9500",
-    "category": "Luxury Beauty & Personal Care",
-    "priceRange": "$220 - $260",
-    "commissionTier": "Top Pick (10% Tier)",
-    "features": [
-      "Removes up to 10x more plaque vs a manual brush",
-      "Personalized app coaching and smart sensor technology",
-      "Premium glass charging base and deluxe travel case"
-    ],
-    "description": "High-performance sonic electric toothbrush providing clinic-level gum and plaque care.",
-    "image": "https://images-na.ssl-images-amazon.com/images/P/B07984Q8WW.01._SCLZZZZZZZ_SX500_.jpg",
-    "affiliateUrl": "https://www.amazon.com/dp/B07984Q8WW?tag=adridiscounts-20"
-  },
-  {
-    "id": "item-4",
     "asin": "B08N5WRWNW",
-    "title": "Breville Barista Touch Espresso Machine",
-    "category": "Kitchen Essentials",
-    "priceRange": "$995 - $1050",
-    "commissionTier": "Top Pick (4.5% Tier)",
+    "title": "Apple AirTag",
+    "purchaseDriver": "Loss Prevention",
+    "priceBenchmark": "Around $30",
     "features": [
-      "Automated touchscreen menu with pre-programmed cafe drinks",
-      "ThermoJet 3-second instant heatup system",
-      "Hands-free microfoam texturing wand"
+      "One-tap setup with iOS",
+      "Precision Finding capability",
+      "Replaceable long-life battery"
     ],
-    "description": "Cafe-grade espresso and microfoam milk drinks automated in a sleek brushed stainless steel chassis.",
-    "image": "https://images-na.ssl-images-amazon.com/images/P/B08N5WRWNW.01._SCLZZZZZZZ_SX500_.jpg",
+    "description": "Consumers urgently buy this to eliminate the stress of lost keys, luggage, and wallets using Apple's massive tracking network.",
+    "conversionHook": "High Velocity",
     "affiliateUrl": "https://www.amazon.com/dp/B08N5WRWNW?tag=adridiscounts-20"
   },
   {
-    "id": "item-5",
-    "asin": "B08J45P21V",
-    "title": "ecobee Smart Thermostat Premium with Smart Sensor",
-    "category": "Smart Home",
-    "priceRange": "$210 - $250",
-    "commissionTier": "Top Pick (4% Tier)",
+    "id": "item-2",
+    "asin": "B07FZ8S74R",
+    "title": "Anker Portable Charger 10000mAh",
+    "purchaseDriver": "Battery Anxiety",
+    "priceBenchmark": "Under $25",
     "features": [
-      "Built-in air quality monitor and radar occupancy sensor",
-      "Seamless integration with Apple HomeKit, Alexa, and Google Assistant",
-      "Saves up to 26% on annual heating and cooling costs"
+      "Pocket-sized portability",
+      "High-speed power delivery",
+      "Universal device compatibility"
     ],
-    "description": "High-accuracy smart climate controller with integrated indoor air quality monitoring.",
-    "image": "https://images-na.ssl-images-amazon.com/images/P/B08J45P21V.01._SCLZZZZZZZ_SX500_.jpg",
-    "affiliateUrl": "https://www.amazon.com/dp/B08J45P21V?tag=adridiscounts-20"
+    "description": "Shoppers instantly convert on this essential backup power source to stay connected and avoid dead-phone anxiety on the go.",
+    "conversionHook": "Essential Everyday",
+    "affiliateUrl": "https://www.amazon.com/dp/B07FZ8S74R?tag=adridiscounts-20"
+  },
+  {
+    "id": "item-3",
+    "asin": "B079V3DZ58",
+    "title": "Revlon One-Step Hair Dryer",
+    "purchaseDriver": "Morning Efficiency",
+    "priceBenchmark": "Under $50",
+    "features": [
+      "Dries and styles simultaneously",
+      "Ionic technology reduces frizz",
+      "Oval brush design for volume"
+    ],
+    "description": "Buyers purchase this heavily sought-after tool to slash their morning hair routine time in half while achieving salon-quality blowouts.",
+    "conversionHook": "Viral Favorite",
+    "affiliateUrl": "https://www.amazon.com/dp/B079V3DZ58?tag=adridiscounts-20"
+  },
+  {
+    "id": "item-4",
+    "asin": "B091H1KPJG",
+    "title": "Brita Standard Water Pitcher",
+    "purchaseDriver": "Health & Taste Upgrade",
+    "priceBenchmark": "Around $35",
+    "features": [
+      "Reduces chlorine and impurities",
+      "Filter change indicator light",
+      "Fits standard refrigerator doors"
+    ],
+    "description": "Consumers snap up this countertop staple for an immediate, cost-effective upgrade to their daily hydration and tap water quality.",
+    "conversionHook": "Mass Appeal",
+    "affiliateUrl": "https://www.amazon.com/dp/B091H1KPJG?tag=adridiscounts-20"
+  },
+  {
+    "id": "item-5",
+    "asin": "B07XJ8C8F5",
+    "title": "Burt's Bees Lip Balm Set",
+    "purchaseDriver": "Immediate Comfort",
+    "priceBenchmark": "Under $15",
+    "features": [
+      "100% natural ingredients",
+      "Infused with soothing beeswax",
+      "Multipack for home and car"
+    ],
+    "description": "An effortless impulse-buy item that provides instant relief for dry lips with high perceived value and zero buyer remorse.",
+    "conversionHook": "Instant Impulse",
+    "affiliateUrl": "https://www.amazon.com/dp/B07XJ8C8F5?tag=adridiscounts-20"
+  },
+  {
+    "id": "item-6",
+    "asin": "B0756CYWWD",
+    "title": "Tile Mate Bluetooth Tracker",
+    "purchaseDriver": "Everyday Convenience",
+    "priceBenchmark": "Around $25",
+    "features": [
+      "Works with iOS and Android",
+      "Find your phone feature",
+      "Water-resistant durability"
+    ],
+    "description": "Buyers purchase this reliable tracker to instantly locate misplaced daily essentials without digging through couch cushions.",
+    "conversionHook": "High Satisfaction",
+    "affiliateUrl": "https://www.amazon.com/dp/B0756CYWWD?tag=adridiscounts-20"
   }
 ]

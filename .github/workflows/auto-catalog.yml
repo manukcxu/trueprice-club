@@ -1,0 +1,76 @@
+name: Autonomous Catalog Refresh & Health Monitor
+
+on:
+  schedule:
+    - cron: '0 4 * * *'  # Runs daily at 04:00 UTC (9:00 PM PDT)
+  workflow_dispatch:      # Allows manual trigger anytime
+
+permissions:
+  contents: write
+
+jobs:
+  refresh-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run Gemini Behavioral Trend Analysis
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          AMAZON_ASSOCIATE_TAG: ${{ secrets.AMAZON_ASSOCIATE_TAG || 'adridiscounts-20' }}
+        run: node scripts/maintainer.mjs
+
+      - name: Verify Health & Filter Broken Items
+        run: node scripts/health-monitor.mjs
+
+      - name: Commit and Push Clean Updates
+        id: git_push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/products.json src/data/issue-history.json
+          
+          if git diff --staged --quiet; then
+            echo "No changes detected. Skipping push."
+            echo "changes_made=false" >> $GITHUB_OUTPUT
+          else
+            git commit -m "chore: automated trending refresh & health report [skip ci]"
+            git push origin main
+            echo "changes_made=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Send Multi-Recipient Email Report
+        if: always()
+        uses: dawidd6/action-send-mail@v23
+        with:
+          server_address: ${{ secrets.SMTP_HOST || 'smtp.gmail.com' }}
+          server_port: ${{ secrets.SMTP_PORT || 465 }}
+          secure: true
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.SMTP_PASSWORD }}
+          subject: "True Price Club: Catalog Automation Report (${{ job.status }})"
+          to: ${{ secrets.REPORT_EMAIL_RECIPIENTS }}
+          from: "True Price Club Monitor <${{ secrets.SMTP_FROM || secrets.SMTP_USERNAME }}>"
+          body: |
+            True Price Club Daily Execution Report
+            ======================================
+            Execution Status: ${{ job.status }}
+            Catalog Changes Pushed: ${{ steps.git_push.outputs.changes_made }}
+            
+            - Model Cascade: gemini-3.8-flash -> gemini-3.5-flash-lite -> fallback
+            - Tag: adridiscounts-20
+            - Production Deployment: Cloudflare Pages auto-deploy triggered
+            
+            Review attached issue-history.json for any filtered ASINs or broken assets.
+          attachments: src/data/issue-history.json
