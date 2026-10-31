@@ -1,92 +1,92 @@
 [
   {
     "id": "item-1",
-    "asin": "B0795W3PL4",
+    "asin": "B0795W3NPL",
     "title": "Anker Portable Magnetic Charger",
     "purchaseDriver": "Battery Anxiety",
-    "priceBenchmark": "Under $30",
+    "priceBenchmark": "Under $40",
     "features": [
-      "Compact pocket size",
-      "High-speed charging",
+      "Ultra-slim pocket profile",
+      "Fast-charging power output",
       "Universal device compatibility"
     ],
-    "description": "Shoppers urgently grab this to eliminate low-battery stress while commuting or traveling without being tied to a wall outlet.",
+    "description": "Shoppers eagerly buy this to instantly eliminate dead-phone anxiety while traveling or commuting.",
     "conversionHook": "High Velocity",
-    "affiliateUrl": "https://www.amazon.com/dp/B0795W3PL4?tag=adridiscounts-20"
+    "affiliateUrl": "https://www.amazon.com/dp/B0795W3NPL?tag=adridiscounts-20"
   },
   {
     "id": "item-2",
-    "asin": "B08N5WRWNW",
-    "title": "Apple AirTag 4-Pack",
-    "purchaseDriver": "Loss Prevention",
-    "priceBenchmark": "Around $90",
+    "asin": "B091H1KPJG",
+    "title": "Revlon One-Step Hair Dryer",
+    "purchaseDriver": "Daily Habit",
+    "priceBenchmark": "Around $45",
     "features": [
-      "Precision finding via iPhone",
-      "Replaceable coin battery",
-      "Water and dust resistant"
+      "Dries and styles simultaneously",
+      "Ionic technology cuts frizz",
+      "Ergonomic lightweight grip"
     ],
-    "description": "Mass-market consumers instantly buy these for peace of mind regarding luggage, keys, and wallets during transit.",
-    "conversionHook": "Essential Everyday",
-    "affiliateUrl": "https://www.amazon.com/dp/B08N5WRWNW?tag=adridiscounts-20"
+    "description": "Consumers purchase this for immediate time-savings during chaotic morning routines.",
+    "conversionHook": "Best Seller",
+    "affiliateUrl": "https://www.amazon.com/dp/B091H1KPJG?tag=adridiscounts-20"
   },
   {
     "id": "item-3",
-    "asin": "B07VZZBSFT",
-    "title": "Burt's Bees Essential Gift Set",
-    "purchaseDriver": "Instant Self-Care",
-    "priceBenchmark": "Under $20",
-    "features": [
-      "Natural ingredients",
-      "Travel-friendly sizes",
-      "Universal hydration formula"
-    ],
-    "description": "An impulse-friendly price point makes this a high-converting go-to for quick gifts or immediate personal skincare upgrades.",
-    "conversionHook": "Impulse Favorite",
-    "affiliateUrl": "https://www.amazon.com/dp/B07VZZBSFT?tag=adridiscounts-20"
-  },
-  {
-    "id": "item-4",
-    "asin": "B09B8W4V34",
+    "asin": "B08N5KWB9H",
     "title": "Amazon Fire TV Stick 4K",
-    "purchaseDriver": "Home Entertainment Upgrade",
+    "purchaseDriver": "Immediate Entertainment",
     "priceBenchmark": "Under $50",
     "features": [
       "Cinematic 4K Ultra HD",
-      "Wi-Fi 6 support",
-      "Alexa Voice Remote included"
+      "Voice remote with Alexa",
+      "Instant streaming setup"
     ],
-    "description": "Buyers easily justify this low-friction purchase to instantly modernize older TVs with fast streaming capabilities.",
+    "description": "Buyers grab this impulse upgrade to instantly transform dumb TVs into smart entertainment hubs.",
     "conversionHook": "Mass Appeal",
-    "affiliateUrl": "https://www.amazon.com/dp/B09B8W4V34?tag=adridiscounts-20"
+    "affiliateUrl": "https://www.amazon.com/dp/B08N5KWB9H?tag=adridiscounts-20"
   },
   {
-    "id": "item-5",
+    "id": "item-4",
     "asin": "B07FZ8S74R",
-    "title": "Brita Standard Water Pitcher Filter",
-    "purchaseDriver": "Daily Health Habit",
-    "priceBenchmark": "Under $25",
+    "title": "Brita Standard Water Pitcher",
+    "purchaseDriver": "Health & Purity",
+    "priceBenchmark": "Around $35",
     "features": [
       "Reduces chlorine and impurities",
-      "Fits all Brita pitchers",
-      "Easy drop-in replacement"
+      "Filter change indicator light",
+      "Fits standard refrigerator doors"
     ],
-    "description": "A recurring household necessity that consumers buy on autopilot to ensure clean-tasting drinking water daily.",
-    "conversionHook": "High Repeat Purchase",
+    "description": "Households buy this immediately for better-tasting drinking water without buying bottled cases.",
+    "conversionHook": "Essential Everyday",
     "affiliateUrl": "https://www.amazon.com/dp/B07FZ8S74R?tag=adridiscounts-20"
   },
   {
-    "id": "item-6",
-    "asin": "B091H1KPJG",
-    "title": "Revlon One-Step Hair Dryer",
-    "purchaseDriver": "Morning Routine Optimization",
-    "priceBenchmark": "Under $50",
+    "id": "item-5",
+    "asin": "B07VZZBSFT",
+    "title": "Tile Mate Bluetooth Tracker",
+    "purchaseDriver": "Loss Prevention",
+    "priceBenchmark": "Under $25",
     "features": [
-      "Dries and styles simultaneously",
-      "Ionic technology reduces frizz",
-      "Oval brush design for volume"
+      "Find keys, wallets, and bags",
+      "Loud ring finder feature",
+      "Long-lasting replaceable battery"
     ],
-    "description": "Shoppers rapidly buy this to cut their morning hair-styling time in half with salon-quality results at home.",
-    "conversionHook": "Viral Best-Seller",
-    "affiliateUrl": "https://www.amazon.com/dp/B091H1KPJG?tag=adridiscounts-20"
+    "description": "Panicked consumers purchase this to permanently solve the daily stress of misplacing essential items.",
+    "conversionHook": "High Conversion",
+    "affiliateUrl": "https://www.amazon.com/dp/B07VZZBSFT?tag=adridiscounts-20"
+  },
+  {
+    "id": "item-6",
+    "asin": "B0745H8WSS",
+    "title": "Hydro Flask Stainless Steel Bottle",
+    "purchaseDriver": "Hydration Habit",
+    "priceBenchmark": "Around $40",
+    "features": [
+      "TempShield double-wall vacuum",
+      "Durable powder coat finish",
+      "Keeps drinks ice-cold 24 hours"
+    ],
+    "description": "Shoppers justify this purchase for ice-cold water retention and all-day hydration tracking.",
+    "conversionHook": "Trending Now",
+    "affiliateUrl": "https://www.amazon.com/dp/B0745H8WSS?tag=adridiscounts-20"
   }
 ]
