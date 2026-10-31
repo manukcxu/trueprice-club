@@ -1,0 +1,84 @@
+:root {
+  --bg: #f8fafc;
+  --card-bg: #ffffff;
+  --card-border: #cbd5e1;
+  --text: #0f172a;
+  --muted: #475569;
+}
+
+body {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+/* Header & Navigation */
+header.site-header .brand {
+  color: #0f172a !important;
+}
+
+.badge-pill {
+  background: #e2e8f0 !important;
+  border-color: #cbd5e1 !important;
+  color: #334155 !important;
+}
+
+/* Hero Section */
+.hero h1 {
+  color: #0f172a !important;
+}
+
+.hero p {
+  color: #475569 !important;
+}
+
+/* Product Cards */
+.product-card {
+  background: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
+.product-card:hover {
+  border-color: #94a3b8 !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* 3D Stage Viewport */
+.stage-container {
+  background: radial-gradient(circle at 50% 35%, #ffffff 0%, #e2e8f0 85%) !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+}
+
+/* Badges */
+.trending-badge {
+  background: #0f172a !important;
+  border-color: #334155 !important;
+  color: #ffffff !important;
+}
+
+.auto-rotate-badge {
+  background: rgba(16, 185, 129, 0.12) !important;
+  border-color: #10b981 !important;
+  color: #059669 !important;
+}
+
+/* Card Content & Typography */
+.product-title {
+  color: #0f172a !important;
+}
+
+.product-desc {
+  color: #475569 !important;
+}
+
+.price-row {
+  border-top: 1px solid #e2e8f0 !important;
+}
+
+.price-label {
+  color: #64748b !important;
+}
+
+.price-val {
+  color: #b45309 !important; /* Rich amber gold readable on white */
+}
