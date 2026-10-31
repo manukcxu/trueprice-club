@@ -6,15 +6,6 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const productsPath = path.resolve(__dirname, '../src/data/products.json');
 const logPath = path.resolve(__dirname, '../src/data/issue-history.json');
 
-async function checkUrl(url) {
-  try {
-    const res = await fetch(url, { method: 'HEAD', signal: AbortSignal.timeout(6000) });
-    return res.status;
-  } catch (err) {
-    return 500;
-  }
-}
-
 async function runHealthCheck() {
   const products = JSON.parse(await fs.readFile(productsPath, 'utf-8'));
   let issueLog = [];
@@ -28,17 +19,18 @@ async function runHealthCheck() {
   const validProducts = [];
 
   for (const item of products) {
-    const imgUrl = `https://images-na.ssl-images-amazon.com/images/P/${item.asin}.01._SCLZZZZZZZ_SX500_.jpg`;
-    const status = await checkUrl(imgUrl);
+    // Validate schema integrity and affiliate link syntax
+    const hasValidAsin = item.asin && item.asin.length === 10;
+    const hasAffiliate = item.affiliateUrl && item.affiliateUrl.includes(item.asin);
 
-    if (status >= 400) {
-      console.warn(`⚠️ Issue detected on ASIN ${item.asin} (HTTP ${status}). Logging...`);
+    if (!hasValidAsin || !hasAffiliate) {
+      console.warn(`⚠️ Data integrity issue detected on item ${item.id} (${item.title})`);
       issueLog.push({
-        asin: item.asin,
+        asin: item.asin || 'MISSING',
         title: item.title,
-        status,
+        status: 422,
         timestamp,
-        action: 'flagged_for_removal'
+        action: 'flagged_invalid_schema'
       });
     } else {
       validProducts.push(item);
@@ -47,7 +39,7 @@ async function runHealthCheck() {
 
   await fs.writeFile(logPath, JSON.stringify(issueLog, null, 2), 'utf-8');
   await fs.writeFile(productsPath, JSON.stringify(validProducts, null, 2), 'utf-8');
-  console.log(`✅ Health check finished. ${validProducts.length}/${products.length} products verified.`);
+  console.log(`✅ Self-hosted 3D catalog health check complete. ${validProducts.length}/${products.length} valid items.`);
 }
 
 runHealthCheck();
