@@ -1,92 +1,92 @@
 [
   {
     "id": "item-1",
-    "asin": "B07955SLFS",
-    "title": "Anker Portable Charger, USB-C Power Bank",
+    "asin": "B07WVKJ6FX",
+    "title": "Anker Portable Magnetic Charger",
     "purchaseDriver": "Battery Anxiety",
-    "priceBenchmark": "Under $25",
+    "priceBenchmark": "Under $40",
     "features": [
-      "Ultra-compact pocket design",
-      "High-speed charging technology",
-      "Universal smartphone compatibility"
+      "Snap-and-go magnetic attachment",
+      "Slim pocket-friendly profile",
+      "Reliable emergency power backup"
     ],
-    "description": "Shoppers experiencing low-battery panic buy this universally essential power bank instantly without hesitation.",
+    "description": "Consumers urgently buy this to eliminate dead-phone panic while on the move without carrying bulky cords.",
     "conversionHook": "High Velocity",
-    "affiliateUrl": "https://www.amazon.com/dp/B07955SLFS?tag=adridiscounts-20"
+    "affiliateUrl": "https://www.amazon.com/dp/B07WVKJ6FX?tag=adridiscounts-20"
   },
   {
     "id": "item-2",
-    "asin": "B08N5WRWNW",
-    "title": "Apple AirTag",
+    "asin": "B08N5KWB9H",
+    "title": "Apple AirTag 4-Pack",
     "purchaseDriver": "Loss Prevention",
-    "priceBenchmark": "Under $30",
+    "priceBenchmark": "Around $90",
     "features": [
-      "Seamless Find My ecosystem sync",
-      "Precision tracking for keys and wallets",
-      "Replaceable coin cell battery"
+      "Precision finding with iPhone",
+      "Long-lasting replaceable battery",
+      "Seamless iOS integration"
     ],
-    "description": "Consumers purchase these peace-of-mind trackers immediately to protect high-value daily carry items from loss.",
+    "description": "Travelers and commuters impulse-buy this item to instantly secure their luggage, keys, and wallets against permanent loss.",
     "conversionHook": "Essential Everyday",
-    "affiliateUrl": "https://www.amazon.com/dp/B08N5WRWNW?tag=adridiscounts-20"
+    "affiliateUrl": "https://www.amazon.com/dp/B08N5KWB9H?tag=adridiscounts-20"
   },
   {
     "id": "item-3",
-    "asin": "B09V3HN1KC",
-    "title": "Burt's Bees Essential Everyday Kit",
-    "purchaseDriver": "Impulse Self-Care",
-    "priceBenchmark": "Under $15",
+    "asin": "B09B9VB4SV",
+    "title": "Revlon One-Step Hair Dryer",
+    "purchaseDriver": "Morning Routine Optimization",
+    "priceBenchmark": "Under $50",
     "features": [
-      "Natural nourishing ingredients",
-      "Travel-friendly sizing",
-      "Trusted heritage brand quality"
+      "Dries and styles simultaneously",
+      "Reduces frizz with ionic tech",
+      "Ergonomic lightweight design"
     ],
-    "description": "An impulse-friendly price point makes this natural skincare kit an effortless single-session add-on purchase.",
-    "conversionHook": "Best Seller",
-    "affiliateUrl": "https://www.amazon.com/dp/B09V3HN1KC?tag=adridiscounts-20"
+    "description": "Shoppers purchase this for an immediate salon-quality blowout that cuts their morning prep time in half.",
+    "conversionHook": "Viral Favorite",
+    "affiliateUrl": "https://www.amazon.com/dp/B09B9VB4SV?tag=adridiscounts-20"
   },
   {
     "id": "item-4",
-    "asin": "B08C4K5N8X",
-    "title": "Revlon One-Step Hair Dryer and Volumizer",
-    "purchaseDriver": "Routine Optimization",
-    "priceBenchmark": "Under $50",
-    "features": [
-      "Combines drying and styling",
-      "Ionic technology reduces frizz",
-      "Ergonomic lightweight handle"
-    ],
-    "description": "Users seeking a faster morning routine eagerly buy this viral styling tool for salon-quality results at home.",
-    "conversionHook": "Viral Favorite",
-    "affiliateUrl": "https://www.amazon.com/dp/B08C4K5N8X?tag=adridiscounts-20"
-  },
-  {
-    "id": "item-5",
-    "asin": "B01MTFK8CB",
-    "title": "Brita Standard Everyday Water Pitcher",
-    "purchaseDriver": "Health & Taste Upgrade",
+    "asin": "B079QYYLMS",
+    "title": "Brita Large Water Pitcher",
+    "purchaseDriver": "Health & Hydration Habit",
     "priceBenchmark": "Under $35",
     "features": [
       "Reduces chlorine and impurities",
-      "Filter change indicator included",
-      "Space-saving fridge design"
+      "Built-in filter change indicator",
+      "Fits easily on fridge shelves"
     ],
-    "description": "Health-conscious buyers instantly upgrade their daily hydration habits by adding this affordable filtration pitcher to cart.",
-    "conversionHook": "Household Staple",
-    "affiliateUrl": "https://www.amazon.com/dp/B01MTFK8CB?tag=adridiscounts-20"
+    "description": "Health-conscious buyers instantly add this to their cart to upgrade tap water quality and ditch single-use plastic bottles.",
+    "conversionHook": "Top Seller",
+    "affiliateUrl": "https://www.amazon.com/dp/B079QYYLMS?tag=adridiscounts-20"
+  },
+  {
+    "id": "item-5",
+    "asin": "B07VZZV4W5",
+    "title": "Bala Bangles Wrist Weights",
+    "purchaseDriver": "At-Home Fitness Upgrade",
+    "priceBenchmark": "Around $50",
+    "features": [
+      "Adds constant light resistance",
+      "Silicone soft-touch coating",
+      "One size fits all wrists/ankles"
+    ],
+    "description": "Fitness enthusiasts buy these to effortlessly intensify daily walks, yoga, and chores without altering their routine.",
+    "conversionHook": "Trending Now",
+    "affiliateUrl": "https://www.amazon.com/dp/B07VZZV4W5?tag=adridiscounts-20"
   },
   {
     "id": "item-6",
-    "asin": "B07FZ8S74R",
-    "title": "Tile Mate Bluetooth Tracker",
-    "purchaseDriver": "Loss Prevention",
-    "priceBenchmark": "Under $25",
+    "asin": "B099ZZW744",
+    "title": "Keurig Milk Frother",
+    "purchaseDriver": "Cafe-at-Home Upgrade",
+    "priceBenchmark": "Under $40",
     "features": [
-      "Loud ring finder alarm",
-      "Works with iOS and Android",
-      "Water-resistant durable build"
+      "Hot and cold foam settings",
+      "Non-stick interior for easy cleaning",
+      "Operates with one touch"
     ],
-    "description": "Tired of misplacing everyday essentials, shoppers pull the trigger on this reliable cross-platform tracker.",
+    "description": "Coffee lovers snap this up to instantly replicate expensive coffee shop lattes right in their own kitchen.",
     "conversionHook": "High Conversion",
-    "affiliateUrl": "https://www.amazon.com/dp/B07FZ8S74R?tag=adridiscounts-20"
+    "affiliateUrl": "https://www.amazon.com/dp/B099ZZW744?tag=adridiscounts-20"
   }
 ]
