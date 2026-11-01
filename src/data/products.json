@@ -1,92 +1,92 @@
 [
   {
     "id": "item-1",
-    "asin": "B0795W3NPL",
-    "title": "Anker Portable Magnetic Charger",
+    "asin": "B07955SLFS",
+    "title": "Anker Portable Charger, USB-C Power Bank",
     "purchaseDriver": "Battery Anxiety",
-    "priceBenchmark": "Under $40",
+    "priceBenchmark": "Under $25",
     "features": [
-      "Ultra-slim pocket profile",
-      "Fast-charging power output",
-      "Universal device compatibility"
+      "Ultra-compact pocket design",
+      "High-speed charging technology",
+      "Universal smartphone compatibility"
     ],
-    "description": "Shoppers eagerly buy this to instantly eliminate dead-phone anxiety while traveling or commuting.",
+    "description": "Shoppers experiencing low-battery panic buy this universally essential power bank instantly without hesitation.",
     "conversionHook": "High Velocity",
-    "affiliateUrl": "https://www.amazon.com/dp/B0795W3NPL?tag=adridiscounts-20"
+    "affiliateUrl": "https://www.amazon.com/dp/B07955SLFS?tag=adridiscounts-20"
   },
   {
     "id": "item-2",
-    "asin": "B091H1KPJG",
-    "title": "Revlon One-Step Hair Dryer",
-    "purchaseDriver": "Daily Habit",
-    "priceBenchmark": "Around $45",
+    "asin": "B08N5WRWNW",
+    "title": "Apple AirTag",
+    "purchaseDriver": "Loss Prevention",
+    "priceBenchmark": "Under $30",
     "features": [
-      "Dries and styles simultaneously",
-      "Ionic technology cuts frizz",
-      "Ergonomic lightweight grip"
+      "Seamless Find My ecosystem sync",
+      "Precision tracking for keys and wallets",
+      "Replaceable coin cell battery"
     ],
-    "description": "Consumers purchase this for immediate time-savings during chaotic morning routines.",
-    "conversionHook": "Best Seller",
-    "affiliateUrl": "https://www.amazon.com/dp/B091H1KPJG?tag=adridiscounts-20"
+    "description": "Consumers purchase these peace-of-mind trackers immediately to protect high-value daily carry items from loss.",
+    "conversionHook": "Essential Everyday",
+    "affiliateUrl": "https://www.amazon.com/dp/B08N5WRWNW?tag=adridiscounts-20"
   },
   {
     "id": "item-3",
-    "asin": "B08N5KWB9H",
-    "title": "Amazon Fire TV Stick 4K",
-    "purchaseDriver": "Immediate Entertainment",
-    "priceBenchmark": "Under $50",
+    "asin": "B09V3HN1KC",
+    "title": "Burt's Bees Essential Everyday Kit",
+    "purchaseDriver": "Impulse Self-Care",
+    "priceBenchmark": "Under $15",
     "features": [
-      "Cinematic 4K Ultra HD",
-      "Voice remote with Alexa",
-      "Instant streaming setup"
+      "Natural nourishing ingredients",
+      "Travel-friendly sizing",
+      "Trusted heritage brand quality"
     ],
-    "description": "Buyers grab this impulse upgrade to instantly transform dumb TVs into smart entertainment hubs.",
-    "conversionHook": "Mass Appeal",
-    "affiliateUrl": "https://www.amazon.com/dp/B08N5KWB9H?tag=adridiscounts-20"
+    "description": "An impulse-friendly price point makes this natural skincare kit an effortless single-session add-on purchase.",
+    "conversionHook": "Best Seller",
+    "affiliateUrl": "https://www.amazon.com/dp/B09V3HN1KC?tag=adridiscounts-20"
   },
   {
     "id": "item-4",
-    "asin": "B07FZ8S74R",
-    "title": "Brita Standard Water Pitcher",
-    "purchaseDriver": "Health & Purity",
-    "priceBenchmark": "Around $35",
+    "asin": "B08C4K5N8X",
+    "title": "Revlon One-Step Hair Dryer and Volumizer",
+    "purchaseDriver": "Routine Optimization",
+    "priceBenchmark": "Under $50",
     "features": [
-      "Reduces chlorine and impurities",
-      "Filter change indicator light",
-      "Fits standard refrigerator doors"
+      "Combines drying and styling",
+      "Ionic technology reduces frizz",
+      "Ergonomic lightweight handle"
     ],
-    "description": "Households buy this immediately for better-tasting drinking water without buying bottled cases.",
-    "conversionHook": "Essential Everyday",
-    "affiliateUrl": "https://www.amazon.com/dp/B07FZ8S74R?tag=adridiscounts-20"
+    "description": "Users seeking a faster morning routine eagerly buy this viral styling tool for salon-quality results at home.",
+    "conversionHook": "Viral Favorite",
+    "affiliateUrl": "https://www.amazon.com/dp/B08C4K5N8X?tag=adridiscounts-20"
   },
   {
     "id": "item-5",
-    "asin": "B07VZZBSFT",
+    "asin": "B01MTFK8CB",
+    "title": "Brita Standard Everyday Water Pitcher",
+    "purchaseDriver": "Health & Taste Upgrade",
+    "priceBenchmark": "Under $35",
+    "features": [
+      "Reduces chlorine and impurities",
+      "Filter change indicator included",
+      "Space-saving fridge design"
+    ],
+    "description": "Health-conscious buyers instantly upgrade their daily hydration habits by adding this affordable filtration pitcher to cart.",
+    "conversionHook": "Household Staple",
+    "affiliateUrl": "https://www.amazon.com/dp/B01MTFK8CB?tag=adridiscounts-20"
+  },
+  {
+    "id": "item-6",
+    "asin": "B07FZ8S74R",
     "title": "Tile Mate Bluetooth Tracker",
     "purchaseDriver": "Loss Prevention",
     "priceBenchmark": "Under $25",
     "features": [
-      "Find keys, wallets, and bags",
-      "Loud ring finder feature",
-      "Long-lasting replaceable battery"
+      "Loud ring finder alarm",
+      "Works with iOS and Android",
+      "Water-resistant durable build"
     ],
-    "description": "Panicked consumers purchase this to permanently solve the daily stress of misplacing essential items.",
+    "description": "Tired of misplacing everyday essentials, shoppers pull the trigger on this reliable cross-platform tracker.",
     "conversionHook": "High Conversion",
-    "affiliateUrl": "https://www.amazon.com/dp/B07VZZBSFT?tag=adridiscounts-20"
-  },
-  {
-    "id": "item-6",
-    "asin": "B0745H8WSS",
-    "title": "Hydro Flask Stainless Steel Bottle",
-    "purchaseDriver": "Hydration Habit",
-    "priceBenchmark": "Around $40",
-    "features": [
-      "TempShield double-wall vacuum",
-      "Durable powder coat finish",
-      "Keeps drinks ice-cold 24 hours"
-    ],
-    "description": "Shoppers justify this purchase for ice-cold water retention and all-day hydration tracking.",
-    "conversionHook": "Trending Now",
-    "affiliateUrl": "https://www.amazon.com/dp/B0745H8WSS?tag=adridiscounts-20"
+    "affiliateUrl": "https://www.amazon.com/dp/B07FZ8S74R?tag=adridiscounts-20"
   }
 ]
