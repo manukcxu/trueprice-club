@@ -1,92 +1,92 @@
 [
   {
     "id": "item-1",
-    "asin": "B07WVKJ6FX",
-    "title": "Anker Portable Magnetic Charger",
-    "purchaseDriver": "Battery Anxiety",
-    "priceBenchmark": "Under $40",
+    "asin": "B0933BVK6T",
+    "title": "Apple AirTag 4-Pack",
+    "purchaseDriver": "Instant Loss Prevention",
+    "priceBenchmark": "Under $90",
     "features": [
-      "Snap-and-go magnetic attachment",
-      "Slim pocket-friendly profile",
-      "Reliable emergency power backup"
+      "Precision Finding with Ultra Wideband",
+      "One-tap seamless pairing",
+      "1+ year replaceable battery"
     ],
-    "description": "Consumers urgently buy this to eliminate dead-phone panic while on the move without carrying bulky cords.",
-    "conversionHook": "High Velocity",
-    "affiliateUrl": "https://www.amazon.com/dp/B07WVKJ6FX?tag=adridiscounts-20"
+    "description": "Eliminates daily anxiety by instantly locating luggage, keys, and wallets.",
+    "conversionHook": "Essential Everyday Tracker",
+    "affiliateUrl": "https://www.amazon.com/dp/B0933BVK6T?tag=adridiscounts-20"
   },
   {
     "id": "item-2",
-    "asin": "B08N5KWB9H",
-    "title": "Apple AirTag 4-Pack",
-    "purchaseDriver": "Loss Prevention",
-    "priceBenchmark": "Around $90",
+    "asin": "B0BYNYN87M",
+    "title": "Anker 20,000mAh 30W Fast Portable Charger",
+    "purchaseDriver": "Low Battery Anxiety Relief",
+    "priceBenchmark": "Under $50",
     "features": [
-      "Precision finding with iPhone",
-      "Long-lasting replaceable battery",
-      "Seamless iOS integration"
+      "30W USB-C Power Delivery",
+      "Smart digital percentage readout",
+      "Multi-device charging"
     ],
-    "description": "Travelers and commuters impulse-buy this item to instantly secure their luggage, keys, and wallets against permanent loss.",
-    "conversionHook": "Essential Everyday",
-    "affiliateUrl": "https://www.amazon.com/dp/B08N5KWB9H?tag=adridiscounts-20"
+    "description": "Compact travel battery that removes the friction of searching for outlets.",
+    "conversionHook": "High-Velocity Travel Pick",
+    "affiliateUrl": "https://www.amazon.com/dp/B0BYNYN87M?tag=adridiscounts-20"
   },
   {
     "id": "item-3",
-    "asin": "B09B9VB4SV",
-    "title": "Revlon One-Step Hair Dryer",
-    "purchaseDriver": "Morning Routine Optimization",
+    "asin": "B0C9R89D6R",
+    "title": "Stanley Quencher H2.0 FlowState 40 oz Tumbler",
+    "purchaseDriver": "Social Proof & Daily Habit Stacking",
     "priceBenchmark": "Under $50",
     "features": [
-      "Dries and styles simultaneously",
-      "Reduces frizz with ionic tech",
-      "Ergonomic lightweight design"
+      "48-hour ice retention",
+      "Car cup-holder base",
+      "Ergonomic comfort handle"
     ],
-    "description": "Shoppers purchase this for an immediate salon-quality blowout that cuts their morning prep time in half.",
-    "conversionHook": "Viral Favorite",
-    "affiliateUrl": "https://www.amazon.com/dp/B09B9VB4SV?tag=adridiscounts-20"
+    "description": "The viral standard for effortless daily hydration across home, work, and travel.",
+    "conversionHook": "Viral Trend Leader",
+    "affiliateUrl": "https://www.amazon.com/dp/B0C9R89D6R?tag=adridiscounts-20"
   },
   {
     "id": "item-4",
-    "asin": "B079QYYLMS",
-    "title": "Brita Large Water Pitcher",
-    "purchaseDriver": "Health & Hydration Habit",
-    "priceBenchmark": "Under $35",
+    "asin": "B0C6B8DPM7",
+    "title": "Ninja Blast Cordless 16 oz Personal Blender",
+    "purchaseDriver": "Frictionless Healthy Habits",
+    "priceBenchmark": "Under $60",
     "features": [
-      "Reduces chlorine and impurities",
-      "Built-in filter change indicator",
-      "Fits easily on fridge shelves"
+      "Rechargeable USB-C base",
+      "Crushes frozen fruit cord-free",
+      "One-handed sip lid"
     ],
-    "description": "Health-conscious buyers instantly add this to their cart to upgrade tap water quality and ditch single-use plastic bottles.",
-    "conversionHook": "Top Seller",
-    "affiliateUrl": "https://www.amazon.com/dp/B079QYYLMS?tag=adridiscounts-20"
+    "description": "Removes kitchen counter cleanup friction for instant smoothies anywhere.",
+    "conversionHook": "Impulse Lifestyle Upgrade",
+    "affiliateUrl": "https://www.amazon.com/dp/B0C6B8DPM7?tag=adridiscounts-20"
   },
   {
     "id": "item-5",
-    "asin": "B07VZZV4W5",
-    "title": "Bala Bangles Wrist Weights",
-    "purchaseDriver": "At-Home Fitness Upgrade",
-    "priceBenchmark": "Around $50",
+    "asin": "B07984Q8WW",
+    "title": "Philips Sonicare ProtectiveClean 6100",
+    "purchaseDriver": "Health Investment & Trust",
+    "priceBenchmark": "Under $110",
     "features": [
-      "Adds constant light resistance",
-      "Silicone soft-touch coating",
-      "One size fits all wrists/ankles"
+      "Pressure sensor protects gums",
+      "3 brushing modes",
+      "Proven plaque removal"
     ],
-    "description": "Fitness enthusiasts buy these to effortlessly intensify daily walks, yoga, and chores without altering their routine.",
-    "conversionHook": "Trending Now",
-    "affiliateUrl": "https://www.amazon.com/dp/B07VZZV4W5?tag=adridiscounts-20"
+    "description": "High-trust oral care item with strong repeat purchases and dental backing.",
+    "conversionHook": "Clinic-Grade Routine",
+    "affiliateUrl": "https://www.amazon.com/dp/B07984Q8WW?tag=adridiscounts-20"
   },
   {
     "id": "item-6",
-    "asin": "B099ZZW744",
-    "title": "Keurig Milk Frother",
-    "purchaseDriver": "Cafe-at-Home Upgrade",
-    "priceBenchmark": "Under $40",
+    "asin": "B00004OCNS",
+    "title": "Lodge 10.25-Inch Cast Iron Skillet",
+    "purchaseDriver": "Lifetime Value & Low-Cost Durability",
+    "priceBenchmark": "Under $25",
     "features": [
-      "Hot and cold foam settings",
-      "Non-stick interior for easy cleaning",
-      "Operates with one touch"
+      "Pre-seasoned with 100% natural oil",
+      "Heirloom build",
+      "Versatile stovetop/oven"
     ],
-    "description": "Coffee lovers snap this up to instantly replicate expensive coffee shop lattes right in their own kitchen.",
-    "conversionHook": "High Conversion",
-    "affiliateUrl": "https://www.amazon.com/dp/B099ZZW744?tag=adridiscounts-20"
+    "description": "Sub-$25 impulse kitchen buy that lasts generations with zero obsolescence.",
+    "conversionHook": "Best Lifetime Value",
+    "affiliateUrl": "https://www.amazon.com/dp/B00004OCNS?tag=adridiscounts-20"
   }
 ]
