@@ -1,0 +1,92 @@
+[
+  {
+    "id": "prod-001",
+    "asin": "B0CP8X7L2Q",
+    "title": "AuraGlide Cordless Wet-Dry Vacuum & Hardwood Floor Washer",
+    "purchaseDriver": "Viral TikTok home reset craze and demand for all-in-one floor cleaning that cuts chore time in half.",
+    "priceBenchmark": "$189.99",
+    "features": [
+      "Dual-tank system keeps clean and dirty water separated",
+      "Self-cleaning roller cycle with hot-air drying dock",
+      "Ultra-quiet brushless motor safe for all sealed hard floors"
+    ],
+    "description": "A lightweight, cordless wet-dry vacuum that vacuums debris and washes floors simultaneously, eliminating traditional mop buckets and sticky residues.",
+    "conversionHook": "Saves 45 minutes every cleaning session—grab the limited-time 20% off coupon today.",
+    "affiliateUrl": "https://www.amazon.com/dp/B0CP8X7L2Q?tag=adridiscounts-20"
+  },
+  {
+    "id": "prod-002",
+    "asin": "B0D3M9K11Z",
+    "title": "LumaGlow 4-in-1 Red Light Therapy Facial Wand with Microcurrent",
+    "purchaseDriver": "Dermatologist-endorsed non-invasive skincare alternatives to expensive medspa treatments.",
+    "priceBenchmark": "$49.99",
+    "features": [
+      "630nm Red Light combined with galvanic microcurrent",
+      "Therapeutic warmth and gentle sonic vibration massage",
+      "360-degree rotating head for under-eye and neck contours"
+    ],
+    "description": "An ultra-portable clinical-grade beauty wand that reduces fine lines, depuffs eye bags, and boosts skin radiance in just 5 minutes daily.",
+    "conversionHook": "Visible collagen boost in 14 days or your money back.",
+    "affiliateUrl": "https://www.amazon.com/dp/B0D3M9K11Z?tag=adridiscounts-20"
+  },
+  {
+    "id": "prod-003",
+    "asin": "B0CM2Y8X9P",
+    "title": "FoldPower 3-in-1 Magnetic Wireless Travel Charging Station",
+    "purchaseDriver": "Summer travel surge and frustration with carrying multiple tangled charging bricks.",
+    "priceBenchmark": "$32.99",
+    "features": [
+      "Simultaneous 15W fast charging for iPhone, Apple Watch, and AirPods",
+      "Ultra-compact foldable silicone body fits into pockets",
+      "Strong N52 magnetic alignment for vertical StandBy mode"
+    ],
+    "description": "Streamline your nightstand and travel pack with this fold-flat magnetic charging pad capable of powering your entire Apple ecosystem with one cable.",
+    "conversionHook": "Consolidate 3 cords into 1 clean dock—the #1 rated travel essential this season.",
+    "affiliateUrl": "https://www.amazon.com/dp/B0CM2Y8X9P?tag=adridiscounts-20"
+  },
+  {
+    "id": "prod-004",
+    "asin": "B0CZ11W4LM",
+    "title": "StrideFlex Ultra-Slim Under-Desk Walking Pad with Remote Control",
+    "purchaseDriver": "Sedentary WFH lifestyles prompting high demand for effortless daily 10,000-step routines.",
+    "priceBenchmark": "$159.99",
+    "features": [
+      "Whisper-quiet 2.5HP motor designed for conference call use",
+      "5-layer anti-slip shock absorption deck to protect joints",
+      "Compact 4.5-inch profile with built-in front transport wheels"
+    ],
+    "description": "An ultra-thin home treadmill engineered to slide directly beneath standing desks, letting users hit their step goals without interrupting the workday.",
+    "conversionHook": "Burn 300+ calories during team meetings—compact storage fits under any couch.",
+    "affiliateUrl": "https://www.amazon.com/dp/B0CZ11W4LM?tag=adridiscounts-20"
+  },
+  {
+    "id": "prod-005",
+    "asin": "B0B8X79NKL",
+    "title": "ThermoPeak Smart Temperature Control Heated Travel Mug (16 oz)",
+    "purchaseDriver": "Shift toward desk-side luxury gadgets for hybrid workers and coffee enthusiasts.",
+    "priceBenchmark": "$89.99",
+    "features": [
+      "Precision app-controlled temperature range from 120°F to 145°F",
+      "All-day heat with charging coaster or 3 hours on integrated battery",
+      "Leak-proof push-to-drink lid with food-grade ceramic interior"
+    ],
+    "description": "Keep your specialty coffee or tea at the exact drinking temperature from the first sip to the last drop with active battery heating.",
+    "conversionHook": "Never microwave your cold coffee again—perfect gift for remote workers.",
+    "affiliateUrl": "https://www.amazon.com/dp/B0B8X79NKL?tag=adridiscounts-20"
+  },
+  {
+    "id": "prod-006",
+    "asin": "B09Y5T2D88",
+    "title": "HydraMatrix Zero-Sugar Rapid Electrolyte Hydration Packets (30-Pack)",
+    "purchaseDriver": "Growing awareness of optimal hydration for mental clarity, fitness recovery, and fasting.",
+    "priceBenchmark": "$27.99",
+    "features": [
+      "Optimal 3:1 sodium-to-potassium ratio with bioavailable magnesium",
+      "Zero sugar, zero artificial dyes, sweetened with organic stevia",
+      "Pocket-sized single-serve sticks for on-the-go hydration"
+    ],
+    "description": "A clean, science-backed electrolyte drink mix formulated to banish brain fog, eliminate muscle cramps, and sustain energy levels without sugar spikes.",
+    "conversionHook": "Beat the afternoon crash faster than coffee—subscribe and save an extra 15%.",
+    "affiliateUrl": "https://www.amazon.com/dp/B09Y5T2D88?tag=adridiscounts-20"
+  }
+]
