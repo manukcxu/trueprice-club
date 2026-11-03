@@ -34,6 +34,11 @@ jobs:
       - name: Verify Health & Filter Broken Items
         run: node scripts/health-monitor.mjs
 
+      - name: Generate PDF Report
+        run: |
+          npm install pdfkit
+          node scripts/generate-pdf.mjs
+
       - name: Commit and Push Clean Updates
         id: git_push
         run: |
@@ -71,6 +76,8 @@ jobs:
             - Model Cascade: gemini-3.8-flash -> gemini-3.5-flash-lite -> fallback
             - Tag: adridiscounts-20
             - Production Deployment: Cloudflare Pages auto-deploy triggered
+            - Social Posting: 6x Daily (6 AM, 9 AM, 12 PM, 3 PM, 6 PM, 9 PM)
+            - Support Hook: San Jose's KCXU 92.7 FM Community Radio
             
-            Review attached issue-history.json for any filtered ASINs or broken assets.
-          attachments: src/data/issue-history.json
+            Attached is your official execution report in PDF format.
+          attachments: catalog-report.pdf
