@@ -1,92 +1,92 @@
 [
   {
     "id": "item-1",
-    "asin": "B0933BVK6T",
-    "title": "Apple AirTag 4-Pack",
-    "purchaseDriver": "Instant Loss Prevention",
-    "priceBenchmark": "Under $90",
+    "asin": "B0795W3PL4",
+    "title": "Anker Portable Magnetic Charger",
+    "purchaseDriver": "Battery Anxiety",
+    "priceBenchmark": "Around $25",
     "features": [
-      "Precision Finding with Ultra Wideband",
-      "One-tap seamless pairing",
-      "1+ year replaceable battery"
+      "Ultra-slim profile",
+      "High-speed charging",
+      "Universal USB-C compatibility"
     ],
-    "description": "Eliminates daily anxiety by instantly locating luggage, keys, and wallets.",
-    "conversionHook": "Essential Everyday Tracker",
-    "affiliateUrl": "https://www.amazon.com/dp/B0933BVK6T?tag=adridiscounts-20"
+    "description": "Consumers snap this up instantly to eliminate dead-phone panic while on the move.",
+    "conversionHook": "High Velocity",
+    "affiliateUrl": "https://www.amazon.com/dp/B0795W3PL4?tag=adridiscounts-20"
   },
   {
     "id": "item-2",
-    "asin": "B0BYNYN87M",
-    "title": "Anker 20,000mAh 30W Fast Portable Charger",
-    "purchaseDriver": "Low Battery Anxiety Relief",
-    "priceBenchmark": "Under $50",
+    "asin": "B08N5KWB9H",
+    "title": "Apple AirTag",
+    "purchaseDriver": "Loss Prevention",
+    "priceBenchmark": "Under $30",
     "features": [
-      "30W USB-C Power Delivery",
-      "Smart digital percentage readout",
-      "Multi-device charging"
+      "Precision finding",
+      "Seamless iOS integration",
+      "Replaceable coin cell battery"
     ],
-    "description": "Compact travel battery that removes the friction of searching for outlets.",
-    "conversionHook": "High-Velocity Travel Pick",
-    "affiliateUrl": "https://www.amazon.com/dp/B0BYNYN87M?tag=adridiscounts-20"
+    "description": "Shoppers buy these in multi-packs immediately to safeguard keys, luggage, and wallets against loss.",
+    "conversionHook": "Essential Everyday",
+    "affiliateUrl": "https://www.amazon.com/dp/B08N5KWB9H?tag=adridiscounts-20"
   },
   {
     "id": "item-3",
-    "asin": "B0C9R89D6R",
-    "title": "Stanley Quencher H2.0 FlowState 40 oz Tumbler",
-    "purchaseDriver": "Social Proof & Daily Habit Stacking",
-    "priceBenchmark": "Under $50",
+    "asin": "B07WJJ75PX",
+    "title": "Brita Standard Water Filter",
+    "purchaseDriver": "Health & Purity Habit",
+    "priceBenchmark": "Under $25",
     "features": [
-      "48-hour ice retention",
-      "Car cup-holder base",
-      "Ergonomic comfort handle"
+      "Reduces chlorine taste",
+      "Fits all standard pitchers",
+      "Easy drop-in replacement"
     ],
-    "description": "The viral standard for effortless daily hydration across home, work, and travel.",
-    "conversionHook": "Viral Trend Leader",
-    "affiliateUrl": "https://www.amazon.com/dp/B0C9R89D6R?tag=adridiscounts-20"
+    "description": "A recurring low-friction purchase driven by the daily desire for clean, great-tasting home hydration.",
+    "conversionHook": "High Repeat Purchase",
+    "affiliateUrl": "https://www.amazon.com/dp/B07WJJ75PX?tag=adridiscounts-20"
   },
   {
     "id": "item-4",
-    "asin": "B0C6B8DPM7",
-    "title": "Ninja Blast Cordless 16 oz Personal Blender",
-    "purchaseDriver": "Frictionless Healthy Habits",
-    "priceBenchmark": "Under $60",
+    "asin": "B08C4K5JTW",
+    "title": "Revlon One-Step Hair Dryer",
+    "purchaseDriver": "Time-Saving Routine",
+    "priceBenchmark": "Around $45",
     "features": [
-      "Rechargeable USB-C base",
-      "Crushes frozen fruit cord-free",
-      "One-handed sip lid"
+      "Combines drying and styling",
+      "Ionic technology for frizz control",
+      "Oval brush design"
     ],
-    "description": "Removes kitchen counter cleanup friction for instant smoothies anywhere.",
-    "conversionHook": "Impulse Lifestyle Upgrade",
-    "affiliateUrl": "https://www.amazon.com/dp/B0C6B8DPM7?tag=adridiscounts-20"
+    "description": "Frictionless upgrade for morning routines that delivers salon-quality blowouts in half the time.",
+    "conversionHook": "Viral Favorite",
+    "affiliateUrl": "https://www.amazon.com/dp/B08C4K5JTW?tag=adridiscounts-20"
   },
   {
     "id": "item-5",
-    "asin": "B07984Q8WW",
-    "title": "Philips Sonicare ProtectiveClean 6100",
-    "purchaseDriver": "Health Investment & Trust",
-    "priceBenchmark": "Under $110",
+    "asin": "B09B8W4V34",
+    "title": "Tile Mate Bluetooth Tracker",
+    "purchaseDriver": "Loss Prevention",
+    "priceBenchmark": "Under $25",
     "features": [
-      "Pressure sensor protects gums",
-      "3 brushing modes",
-      "Proven plaque removal"
+      "Works with iOS and Android",
+      "Water resistant",
+      "Reverse phone finder"
     ],
-    "description": "High-trust oral care item with strong repeat purchases and dental backing.",
-    "conversionHook": "Clinic-Grade Routine",
-    "affiliateUrl": "https://www.amazon.com/dp/B07984Q8WW?tag=adridiscounts-20"
+    "description": "An impulse buy for chronically misplacing everyday carry items like keys and bags.",
+    "conversionHook": "High Utility",
+    "affiliateUrl": "https://www.amazon.com/dp/B09B8W4V34?tag=adridiscounts-20"
   },
   {
     "id": "item-6",
-    "asin": "B00004OCNS",
-    "title": "Lodge 10.25-Inch Cast Iron Skillet",
-    "purchaseDriver": "Lifetime Value & Low-Cost Durability",
-    "priceBenchmark": "Under $25",
+    "asin": "B07FZ8S74R",
+    "title": "KitchenAid Gourmet Meat Tenderizer",
+    "purchaseDriver": "Culinary Upgrade",
+    "priceBenchmark": "Around $20",
     "features": [
-      "Pre-seasoned with 100% natural oil",
-      "Heirloom build",
-      "Versatile stovetop/oven"
+      "Dual-sided textured mallet",
+      "Balanced weighted head",
+      "Dishwasher safe"
     ],
-    "description": "Sub-$25 impulse kitchen buy that lasts generations with zero obsolescence.",
-    "conversionHook": "Best Lifetime Value",
-    "affiliateUrl": "https://www.amazon.com/dp/B00004OCNS?tag=adridiscounts-20"
+    "description": "An affordable kitchen tool upgrade that delivers immediate performance improvement for home cooks.",
+    "conversionHook": "Kitchen Essential",
+    "affiliateUrl": "https://www.amazon.com/dp/B07FZ8S74R?tag=adridiscounts-20"
   }
 ]
