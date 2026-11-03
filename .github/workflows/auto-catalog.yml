@@ -2,7 +2,7 @@ name: Autonomous Catalog Refresh & Health Monitor
 
 on:
   schedule:
-    - cron: '0 4 * * *'  # Runs daily at 04:00 UTC (9:00 PM PDT)
+        - cron: '0 9 * * *' # Runs daily at 1:00 AM PST
   workflow_dispatch:      # Allows manual trigger anytime
 
 permissions:
