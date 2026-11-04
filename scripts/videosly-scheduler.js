@@ -81,7 +81,14 @@ async function runScheduler() {
     console.log(`\n--- Processing Product [${i + 1}/${products.length}]: ${product.name} ---`);
 
     let productUrl = product.url || product.affiliateUrl;
-    if (productUrl && !productUrl.includes('tag=adridiscounts-20')) {
+
+    if (!productUrl) {
+      console.warn(`⚠️ Warning: Product "${product.name}" has no URL. Skipping.`);
+      hasErrors = true;
+      continue;
+    }
+
+    if (!productUrl.includes('tag=adridiscounts-20')) {
       const separator = productUrl.includes('?') ? '&' : '?';
       productUrl = `${productUrl}${separator}tag=adridiscounts-20`;
     }
