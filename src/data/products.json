@@ -1,92 +1,92 @@
 [
   {
     "id": "item-1",
-    "asin": "B0795W3PL4",
-    "title": "Anker Portable Magnetic Charger",
+    "asin": "B0795W3N53",
+    "title": "Anker Portable Charger 10000mAh",
     "purchaseDriver": "Battery Anxiety",
-    "priceBenchmark": "Around $25",
+    "priceBenchmark": "Under $25",
     "features": [
-      "Ultra-slim profile",
-      "High-speed charging",
-      "Universal USB-C compatibility"
+      "Ultra-compact pocket size",
+      "High-speed charging tech",
+      "Universal device compatibility"
     ],
-    "description": "Consumers snap this up instantly to eliminate dead-phone panic while on the move.",
-    "conversionHook": "High Velocity",
-    "affiliateUrl": "https://www.amazon.com/dp/B0795W3PL4?tag=adridiscounts-20"
+    "description": "Consumers urgently buy this to eliminate dead-phone anxiety while away from home.",
+    "conversionHook": "Essential Everyday",
+    "affiliateUrl": "https://www.amazon.com/dp/B0795W3N53?tag=adridiscounts-20"
   },
   {
     "id": "item-2",
-    "asin": "B08N5KWB9H",
+    "asin": "B08N5WRWNW",
     "title": "Apple AirTag",
     "purchaseDriver": "Loss Prevention",
-    "priceBenchmark": "Under $30",
+    "priceBenchmark": "Around $30",
     "features": [
-      "Precision finding",
-      "Seamless iOS integration",
-      "Replaceable coin cell battery"
+      "Seamless Find My integration",
+      "Replaceable coin cell battery",
+      "Water and dust resistant"
     ],
-    "description": "Shoppers buy these in multi-packs immediately to safeguard keys, luggage, and wallets against loss.",
-    "conversionHook": "Essential Everyday",
-    "affiliateUrl": "https://www.amazon.com/dp/B08N5KWB9H?tag=adridiscounts-20"
+    "description": "Shoppers instantly purchase these for peace of mind regarding keys, luggage, and wallets.",
+    "conversionHook": "High Velocity",
+    "affiliateUrl": "https://www.amazon.com/dp/B08N5WRWNW?tag=adridiscounts-20"
   },
   {
     "id": "item-3",
-    "asin": "B07WJJ75PX",
-    "title": "Brita Standard Water Filter",
-    "purchaseDriver": "Health & Purity Habit",
-    "priceBenchmark": "Under $25",
+    "asin": "B07WJJJV4B",
+    "title": "Burt's Bees Essential Kit",
+    "purchaseDriver": "Instant Gratification",
+    "priceBenchmark": "Under $15",
     "features": [
-      "Reduces chlorine taste",
-      "Fits all standard pitchers",
-      "Easy drop-in replacement"
+      "Travel-friendly sizing",
+      "100% natural ingredients",
+      "Top-rated gift appeal"
     ],
-    "description": "A recurring low-friction purchase driven by the daily desire for clean, great-tasting home hydration.",
-    "conversionHook": "High Repeat Purchase",
-    "affiliateUrl": "https://www.amazon.com/dp/B07WJJ75PX?tag=adridiscounts-20"
+    "description": "An impulsive, low-friction add-on purchase driven by brand trust and self-care habits.",
+    "conversionHook": "Impulse Buy",
+    "affiliateUrl": "https://www.amazon.com/dp/B07WJJJV4B?tag=adridiscounts-20"
   },
   {
     "id": "item-4",
-    "asin": "B08C4K5JTW",
-    "title": "Revlon One-Step Hair Dryer",
-    "purchaseDriver": "Time-Saving Routine",
-    "priceBenchmark": "Around $45",
+    "asin": "B07FZ8S74R",
+    "title": "Brita Standard Water Filter Replacements",
+    "purchaseDriver": "Consumable Replenishment",
+    "priceBenchmark": "Around $25",
     "features": [
-      "Combines drying and styling",
-      "Ionic technology for frizz control",
-      "Oval brush design"
+      "Reduces chlorine and impurities",
+      "Fits all Brita pitchers",
+      "Long-lasting cartridge life"
     ],
-    "description": "Frictionless upgrade for morning routines that delivers salon-quality blowouts in half the time.",
-    "conversionHook": "Viral Favorite",
-    "affiliateUrl": "https://www.amazon.com/dp/B08C4K5JTW?tag=adridiscounts-20"
+    "description": "Purchased on autopilot by health-conscious households needing routine replacements.",
+    "conversionHook": "Auto-Replenish",
+    "affiliateUrl": "https://www.amazon.com/dp/B07FZ8S74R?tag=adridiscounts-20"
   },
   {
     "id": "item-5",
-    "asin": "B09B8W4V34",
+    "asin": "B07VBPZ96G",
     "title": "Tile Mate Bluetooth Tracker",
     "purchaseDriver": "Loss Prevention",
     "priceBenchmark": "Under $25",
     "features": [
+      "Loud ring finder alert",
       "Works with iOS and Android",
-      "Water resistant",
-      "Reverse phone finder"
+      "Durable water-resistant design"
     ],
-    "description": "An impulse buy for chronically misplacing everyday carry items like keys and bags.",
-    "conversionHook": "High Utility",
-    "affiliateUrl": "https://www.amazon.com/dp/B09B8W4V34?tag=adridiscounts-20"
+    "description": "Acquired immediately after a misplaced-item scare to protect daily carry essentials.",
+    "conversionHook": "Problem Solver",
+    "affiliateUrl": "https://www.amazon.com/dp/B07VBPZ96G?tag=adridiscounts-20"
   },
   {
     "id": "item-6",
-    "asin": "B07FZ8S74R",
-    "title": "KitchenAid Gourmet Meat Tenderizer",
-    "purchaseDriver": "Culinary Upgrade",
-    "priceBenchmark": "Around $20",
+    "asin": "B079JJBJKF",
+    "title": "Revlon One-Step Hair Dryer Brush",
+    "purchaseDriver": "Quality-of-Life Upgrade",
+    "priceBenchmark": "Under $50",
     "features": [
-      "Dual-sided textured mallet",
-      "Balanced weighted head",
-      "Dishwasher safe"
+      "Dries and styles simultaneously",
+      "Ionic technology cuts frizz",
+      "Ergonomic lightweight design"
     ],
-    "description": "An affordable kitchen tool upgrade that delivers immediate performance improvement for home cooks.",
-    "conversionHook": "Kitchen Essential",
-    "affiliateUrl": "https://www.amazon.com/dp/B07FZ8S74R?tag=adridiscounts-20"
+    "description": "Shoppers convert rapidly to slash their morning hair routine time in half.",
+    "conversionHook": "Viral Favorite",
+    "affiliateUrl": "https://www.amazon.com/dp/B079JJBJKF?tag=adridiscounts-20"
   }
 ]
