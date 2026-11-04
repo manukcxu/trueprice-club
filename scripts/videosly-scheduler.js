@@ -12,15 +12,16 @@ async function getAccessToken() {
 
   console.log("🔄 Exchanging refresh token for access token...");
   
-  // Standard OAuth2 refresh token request (form-urlencoded without Bearer header)
+  const cleanToken = REFRESH_TOKEN.trim();
   const params = new URLSearchParams();
   params.append('grant_type', 'refresh_token');
-  params.append('refresh_token', REFRESH_TOKEN.trim());
+  params.append('refresh_token', cleanToken);
 
   const response = await fetch(`${API_BASE}/oauth/token`, {
     method: 'POST',
     headers: { 
-      'Content-Type': 'application/x-www-form-urlencoded'
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'Authorization': `Bearer ${cleanToken}`
     },
     body: params.toString()
   });
