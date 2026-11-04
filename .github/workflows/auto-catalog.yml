@@ -50,7 +50,7 @@ jobs:
             echo "No changes detected. Skipping push."
             echo "changes_made=false" >> $GITHUB_OUTPUT
           else
-            git commit -m "chore: automated trending refresh & health report [skip ci]"
+            git commit -m "chore: automated trending refresh & health report"
             git push origin main
             echo "changes_made=true" >> $GITHUB_OUTPUT
           fi

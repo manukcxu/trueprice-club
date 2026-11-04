@@ -1,9 +1,11 @@
 // videosly-scheduler.js
 import fs from 'fs';
 
-// Replace with your fresh Videosly JWT token from your dashboard if expired
-const TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXAiOiJtY3BfYWNjZXNzIiwiY2xpZW50X2lkIjoidmlkZW9zbHktZGFzaGJvYXJkIiwic2NvcGUiOiJtY3A6cmVhZCBtY3A6d3JpdGUgbWNwOmRlbGV0ZSIsImlhdCI6MTc5MzU3NDUxNiwiZXhwIjoxNzkzNTc4MTE2LCJhdWQiOiJodHRwczovL2FwaS52aWRlb3NseS5haS9tY3AiLCJpc3MiOiJodHRwczovL2FwaS52aWRlb3NseS5haSIsInN1YiI6IlROVHpzNERvc0dpeSIsImp0aSI6IjZlNTI1NjVhLWY4NmUtNDViMi1hYTkxLTZkOWZiZjA2ZjQ4YyJ9.CQUCmqEgPvooeyGfLg8tj-wh509O7BUgFdFmGllqC7U";
+// Token comes from the GitHub Actions secret VIDEOSLY_API_KEY (never hardcode it).
+const TOKEN = process.env.VIDEOSLY_API_KEY;
 const MCP_URL = "https://api.videosly.ai/mcp";
+// TEST MODE: only the first two products, posted immediately.
+const PRODUCT_COUNT = Number(process.env.PRODUCT_COUNT || 2);
 
 const CHANNELS = {
     tiktok: "aBOX6wcHBoJ_",
@@ -38,17 +40,25 @@ async function callMcpTool(toolName, args) {
 }
 
 async function runAutomation() {
-    try {
-        console.log("1. Loading product catalog from src/data/products.json...");
-        const productsRaw = fs.readFileSync('src/data/products.json', 'utf8');
-        const products = JSON.parse(productsRaw);
-        
-        const product = products[0] || {
-            title: "Featured Deal",
-            priceRange: "$29.99 - $39.99",
-            affiliateUrl: "https://www.amazon.com/dp/B00EXAMPLE"
-        };
+    if (!TOKEN) {
+        console.error("VIDEOSLY_API_KEY is not set. Add it as a GitHub Actions secret.");
+        process.exit(1);
+    }
+    console.log("1. Loading product catalog from src/data/products.json...");
+    const products = JSON.parse(fs.readFileSync('src/data/products.json', 'utf8'));
+    const selected = products.slice(0, PRODUCT_COUNT);
+    if (selected.length === 0) throw new Error("No products found in src/data/products.json");
+    for (const product of selected) {
+        try {
+            await runForProduct(product);
+        } catch (error) {
+            console.error(`Automation Error for "${product.title}":`, error.message);
+        }
+    }
+}
 
+async function runForProduct(product) {
+    {
         const priceDisplay = product.priceRange || 
             (product.minPrice && product.maxPrice ? `$${product.minPrice} - $${product.maxPrice}` : 
             (product.price ? `$${product.price}` : "$29.99 - $39.99"));
@@ -99,8 +109,8 @@ async function runAutomation() {
             }
         }
 
-        console.log("\n4. Scheduling to social platforms with direct affiliate link & community hook...");
-        const scheduleDate = new Date(Date.now() + 3600000).toISOString();
+        console.log("\n4. Posting to social platforms immediately (test mode)...");
+        const scheduleDate = new Date().toISOString();
         const socialCaption = `🔥 Get ${product.title} for ${priceDisplay}!\n\n${communityHook}\n\n👉 Order here: ${affiliateLink}\n\n#kcxu #sanjose #deals #adridiscounts`;
 
         for (const [platform, channelId] of Object.entries(CHANNELS)) {
@@ -116,10 +126,11 @@ async function runAutomation() {
             console.log(`Successfully scheduled on ${platform}!`);
         }
 
-        console.log("\n🎉 Automation complete! Video synced with catalog, price, affiliate link, and KCXU community hook.");
-    } catch (error) {
-        console.error("\nAutomation Error:", error.message);
+        console.log(`\n🎉 Done: ${product.title}`);
     }
 }
 
-runAutomation();
+runAutomation().catch(err => {
+    console.error("Fatal:", err.message);
+    process.exit(1);
+});
