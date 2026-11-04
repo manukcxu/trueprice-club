@@ -17,11 +17,11 @@ async function getAccessToken() {
   params.append('grant_type', 'refresh_token');
   params.append('refresh_token', cleanToken);
 
+  // Standard OAuth2 token exchange: body parameters only, NO Authorization header
   const response = await fetch(`${API_BASE}/oauth/token`, {
     method: 'POST',
     headers: { 
-      'Content-Type': 'application/x-www-form-urlencoded',
-      'Authorization': `Bearer ${cleanToken}`
+      'Content-Type': 'application/x-www-form-urlencoded'
     },
     body: params.toString()
   });
