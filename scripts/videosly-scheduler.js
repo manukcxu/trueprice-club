@@ -11,22 +11,35 @@ async function getAccessToken() {
   }
 
   console.log("🔄 Exchanging refresh token for access token...");
+  
+  // Standard OAuth2 refresh token request (form-urlencoded without Bearer header)
+  const params = new URLSearchParams();
+  params.append('grant_type', 'refresh_token');
+  params.append('refresh_token', REFRESH_TOKEN.trim());
+
   const response = await fetch(`${API_BASE}/oauth/token`, {
     method: 'POST',
     headers: { 
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${REFRESH_TOKEN}`
+      'Content-Type': 'application/x-www-form-urlencoded'
     },
-    body: JSON.stringify({ refresh_token: REFRESH_TOKEN })
+    body: params.toString()
   });
 
+  const responseText = await response.text();
+  
   if (!response.ok) {
-    const errText = await response.text();
-    console.error(`❌ Failed to exchange refresh token: ${response.status} ${errText}`);
+    console.error(`❌ Failed to exchange refresh token: ${response.status} - ${responseText}`);
     process.exit(1);
   }
 
-  const data = await response.json();
+  let data;
+  try {
+    data = JSON.parse(responseText);
+  } catch (e) {
+    console.error("❌ Failed to parse JSON response from /oauth/token:", responseText);
+    process.exit(1);
+  }
+
   const accessToken = data.access_token || data.token;
   
   if (!accessToken) {
