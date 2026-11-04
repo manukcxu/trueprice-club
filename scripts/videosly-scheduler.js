@@ -2,38 +2,17 @@ import fs from 'fs';
 import path from 'path';
 
 const API_BASE = 'https://api.videosly.ai/v1';
-const REFRESH_TOKEN = process.env.VIDEOSLY_API_KEY;
+const API_KEY = process.env.VIDEOSLY_API_KEY;
 
-async function getAccessToken() {
-  if (!REFRESH_TOKEN) {
+function getHeaders() {
+  if (!API_KEY) {
     console.error("❌ Error: VIDEOSLY_API_KEY secret is missing or empty.");
     process.exit(1);
   }
-
-  console.log("🔄 Exchanging refresh token for access token...");
-  const response = await fetch(`${API_BASE}/oauth/token`, {
-    method: 'POST',
-    headers: { 
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${REFRESH_TOKEN}`
-    },
-    body: JSON.stringify({ refresh_token: REFRESH_TOKEN })
-  });
-
-  if (!response.ok) {
-    const errText = await response.text();
-    console.error(`❌ Failed to exchange refresh token: ${response.status} ${errText}`);
-    process.exit(1);
-  }
-
-  const data = await response.json();
-  if (!data.access_token) {
-    console.error("❌ Error: Response from /oauth/token did not contain an access_token.");
-    process.exit(1);
-  }
-
-  console.log("✅ Successfully acquired fresh access token.");
-  return data.access_token;
+  return {
+    'Content-Type': 'application/json',
+    'Authorization': `Bearer ${API_KEY}`
+  };
 }
 
 async function verifyUrl(url) {
@@ -60,7 +39,7 @@ async function verifyUrl(url) {
 }
 
 async function runScheduler() {
-  const accessToken = await getAccessToken();
+  const headers = getHeaders();
 
   const catalogPath = path.resolve('src/data/products.json');
   if (!fs.existsSync(catalogPath)) {
@@ -113,10 +92,7 @@ async function runScheduler() {
     try {
       const postRes = await fetch(`${API_BASE}/videos`, {
         method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${accessToken}`,
-          'Content-Type': 'application/json'
-        },
+        headers: headers,
         body: JSON.stringify(payload)
       });
 
