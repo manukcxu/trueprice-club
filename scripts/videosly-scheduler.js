@@ -13,7 +13,10 @@ async function getAccessToken() {
   console.log("🔄 Exchanging refresh token for access token...");
   const response = await fetch(`${API_BASE}/oauth/token`, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: { 
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${REFRESH_TOKEN}`
+    },
     body: JSON.stringify({ refresh_token: REFRESH_TOKEN })
   });
 
