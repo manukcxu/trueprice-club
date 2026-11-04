@@ -1,163 +1,159 @@
 import fs from 'fs';
 import path from 'path';
+import crypto from 'crypto';
 
 const API_BASE = 'https://api.videosly.ai/v1';
-const REFRESH_TOKEN = process.env.VIDEOSLY_API_KEY;
+const API_KEY = (process.env.VIDEOSLY_API_KEY || '').trim();
+const DRY_RUN = process.env.DRY_RUN === '1';
 
-async function getAccessToken() {
-  if (!REFRESH_TOKEN) {
-    console.error("❌ Error: VIDEOSLY_API_KEY secret is missing or empty.");
-    process.exit(1);
-  }
+// UNVERIFIED: confirm these REST paths against Videosly's API reference before running.
+const PATHS = {
+  generate: '/videos/generate',
+  status: (videoId) => `/videos/${videoId}`,
+  post: (videoId) => `/videos/${videoId}/posts`,
+};
 
-  console.log("🔄 Exchanging refresh token for access token...");
-  
-  const cleanToken = REFRESH_TOKEN.trim();
-  const params = new URLSearchParams();
-  params.append('grant_type', 'refresh_token');
-  params.append('refresh_token', cleanToken);
+const CHANNELS = [
+  { name: 'facebook', channelId: 'Mm60SH0-EK3u' },
+  { name: 'instagram', channelId: 'OxXUqei9Uef5' },
+  { name: 'youtube', channelId: 'ry2qbxeHiw5x' },
+  { name: 'tiktok', channelId: 'aBOx6wcHBoJ_' },
+];
 
-  // Standard OAuth2 token exchange: body parameters only, NO Authorization header
-  const response = await fetch(`${API_BASE}/oauth/token`, {
-    method: 'POST',
-    headers: { 
-      'Content-Type': 'application/x-www-form-urlencoded'
+const POLL_INTERVAL_MS = 15_000;
+const POLL_MAX_ATTEMPTS = 60;
+
+if (!API_KEY) {
+  console.error('VIDEOSLY_API_KEY is missing or empty.');
+  process.exit(1);
+}
+
+async function api(method, route, body) {
+  const res = await fetch(`${API_BASE}${route}`, {
+    method,
+    headers: {
+      Authorization: `Bearer ${API_KEY}`,
+      'Content-Type': 'application/json',
+      Accept: 'application/json',
     },
-    body: params.toString()
+    body: body ? JSON.stringify(body) : undefined,
   });
-
-  const responseText = await response.text();
-  
-  if (!response.ok) {
-    console.error(`❌ Failed to exchange refresh token: ${response.status} - ${responseText}`);
-    process.exit(1);
-  }
-
-  let data;
-  try {
-    data = JSON.parse(responseText);
-  } catch (e) {
-    console.error("❌ Failed to parse JSON response from /oauth/token:", responseText);
-    process.exit(1);
-  }
-
-  const accessToken = data.access_token || data.token;
-  
-  if (!accessToken) {
-    console.error("❌ Error: Response from /oauth/token did not contain an access token:", JSON.stringify(data));
-    process.exit(1);
-  }
-
-  console.log("✅ Successfully acquired fresh access token.");
-  return accessToken;
+  const text = await res.text();
+  if (!res.ok) throw new Error(`${method} ${route} -> ${res.status} ${text}`);
+  return text ? JSON.parse(text) : {};
 }
 
 async function verifyUrl(url) {
-  if (url.includes('amazon.com') || url.includes('amzn.to')) {
-    return true; 
-  }
+  if (url.includes('amazon.com') || url.includes('amzn.to')) return true;
   try {
-    const res = await fetch(url, {
-      method: 'GET',
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
-      },
-      redirect: 'follow'
-    });
-    
+    const res = await fetch(url, { redirect: 'follow' });
     if (!res.ok) return false;
     const html = await res.text();
-    if (html.includes('Page Not Found') || html.includes('Looking for something?')) {
-      return false;
-    }
-    
-    return true;
-  } catch (e) {
+    return !(html.includes('Page Not Found') || html.includes('Looking for something?'));
+  } catch {
     return true;
   }
 }
 
-async function runScheduler() {
-  const accessToken = await getAccessToken();
+async function generateVideo(product, productUrl) {
+  const idempotencyKey = crypto.createHash('sha256').update(productUrl).digest('hex').slice(0, 32);
+  const prompt = `${product.name}. ${product.description ?? ''}`.slice(0, 8000);
+  const data = await api('POST', PATHS.generate, {
+    title: product.name.slice(0, 255),
+    prompt,
+    duration: 'short',
+    aspectRatio: '9:16',
+    idempotencyKey,
+  });
+  if (!data.videoId) throw new Error(`generate returned no videoId: ${JSON.stringify(data)}`);
+  return data.videoId;
+}
 
+async function waitForVideo(videoId) {
+  for (let i = 0; i < POLL_MAX_ATTEMPTS; i++) {
+    const video = await api('GET', PATHS.status(videoId));
+    if (video.status === 'completed') return;
+    // UNVERIFIED: the failure status name; add it here once known.
+    if (video.status === 'failed') throw new Error(`video ${videoId} failed to render`);
+    await new Promise((r) => setTimeout(r, POLL_INTERVAL_MS));
+  }
+  throw new Error(`video ${videoId} not completed after ${POLL_MAX_ATTEMPTS} polls`);
+}
+
+async function postToChannels(videoId, title, caption) {
+  let allOk = true;
+  for (const ch of CHANNELS) {
+    if (DRY_RUN) {
+      console.log(`[dry run] would post to ${ch.name} (${ch.channelId})`);
+      continue;
+    }
+    try {
+      await api('POST', PATHS.post(videoId), {
+        channelId: ch.channelId,
+        title,
+        content: caption.slice(0, 5000),
+        privacy: 'public',
+        aiGenerated: true,
+      });
+      console.log(`✅ posted to ${ch.name}`);
+    } catch (err) {
+      allOk = false;
+      console.error(`❌ ${ch.name}: ${err.message}`);
+    }
+  }
+  return allOk;
+}
+
+async function main() {
   const catalogPath = path.resolve('src/data/products.json');
   if (!fs.existsSync(catalogPath)) {
-    console.error(`❌ Catalog file not found at ${catalogPath}`);
+    console.error(`Catalog not found at ${catalogPath}`);
     process.exit(1);
   }
-
-  const rawData = fs.readFileSync(catalogPath, 'utf8');
-  const catalog = JSON.parse(rawData);
+  const catalog = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
   const products = catalog.products || catalog;
-
-  console.log(`📦 Loaded ${products.length} products from catalog. Processing...`);
+  console.log(`Loaded ${products.length} products${DRY_RUN ? ' (dry run)' : ''}.`);
 
   let hasErrors = false;
 
-  for (let i = 0; i < products.length; i++) {
-    const product = products[i];
-    const productName = product.title || product.name || `Product #${i + 1}`;
-    console.log(`\n--- Processing Product [${i + 1}/${products.length}]: ${productName} ---`);
+  for (const [i, product] of products.entries()) {
+    const name = product.title || product.name || `Product #${i + 1}`;
+    console.log(`\n--- [${i + 1}/${products.length}] ${name} ---`);
 
     let productUrl = product.url || product.affiliateUrl;
-
     if (!productUrl) {
-      console.warn(`⚠️ Warning: Product "${productName}" has no URL. Skipping.`);
+      console.warn(`⚠️ "${name}" has no URL. Skipping.`);
       hasErrors = true;
       continue;
     }
-
     if (!productUrl.includes('tag=adridiscounts-20')) {
-      const separator = productUrl.includes('?') ? '&' : '?';
-      productUrl = `${productUrl}${separator}tag=adridiscounts-20`;
+      productUrl += (productUrl.includes('?') ? '&' : '?') + 'tag=adridiscounts-20';
     }
-
-    console.log(`🔍 Verifying URL: ${productUrl}`);
-    const isValid = await verifyUrl(productUrl);
-    if (!isValid) {
-      console.warn(`⚠️ Warning: Affiliate URL failed validation: ${productUrl}. Skipping product.`);
+    if (!(await verifyUrl(productUrl))) {
+      console.warn(`⚠️ Affiliate URL failed validation. Skipping: ${productUrl}`);
       continue;
     }
-
-    const payload = {
-      title: productName,
-      description: `${product.description || ''}\n\nGet yours here: ${productUrl}\n\nBrought to you by KCXU 92.7 FM San Jose.`,
-      product_url: productUrl,
-      audio_intro: "kcxu_station_intro_san_jose.mp3",
-      platforms: ["tiktok", "instagram", "facebook"]
-    };
 
     try {
-      const postRes = await fetch(`${API_BASE}/videos`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${accessToken}`,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(payload)
-      });
+      const videoId = await generateVideo(product, productUrl);
+      console.log(`🎬 generating ${videoId}`);
+      await waitForVideo(videoId);
+      console.log(`✔ ${videoId} completed`);
 
-      if (!postRes.ok) {
-        const errDetail = await postRes.text();
-        console.error(`❌ Failed to post video for "${productName}": ${postRes.status} - ${errDetail}`);
-        hasErrors = true;
-      } else {
-        const resultData = await postRes.json();
-        console.log(`✅ Successfully queued video for "${productName}":`, resultData.id || 'OK');
-      }
-    } catch (apiErr) {
-      console.error(`❌ Network or API error posting "${productName}":`, apiErr.message);
+      const caption = `${product.description || ''}\n\nGet yours here: ${productUrl}\n\nBrought to you by KCXU 92.7 FM San Jose.`;
+      const ok = await postToChannels(videoId, name, caption);
+      if (!ok) hasErrors = true;
+    } catch (err) {
       hasErrors = true;
+      console.error(`❌ "${name}": ${err.message}`);
     }
   }
 
   if (hasErrors) {
-    console.error("\n❌ Scheduler finished with errors. Exiting with status 1.");
+    console.error('\nFinished with errors.');
     process.exit(1);
-  } else {
-    console.log("\n✨ All catalog products processed successfully!");
   }
+  console.log('\n✨ All products processed.');
 }
 
-runScheduler();
+main();
