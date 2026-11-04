@@ -2,21 +2,43 @@ import fs from 'fs';
 import path from 'path';
 
 const API_BASE = 'https://api.videosly.ai/v1';
-const API_KEY = process.env.VIDEOSLY_API_KEY;
+const REFRESH_TOKEN = process.env.VIDEOSLY_API_KEY;
 
-function getHeaders() {
-  if (!API_KEY) {
+async function getAccessToken() {
+  if (!REFRESH_TOKEN) {
     console.error("❌ Error: VIDEOSLY_API_KEY secret is missing or empty.");
     process.exit(1);
   }
-  return {
-    'Content-Type': 'application/json',
-    'Authorization': `Bearer ${API_KEY}`
-  };
+
+  console.log("🔄 Exchanging refresh token for access token...");
+  const response = await fetch(`${API_BASE}/oauth/token`, {
+    method: 'POST',
+    headers: { 
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${REFRESH_TOKEN}`
+    },
+    body: JSON.stringify({ refresh_token: REFRESH_TOKEN })
+  });
+
+  if (!response.ok) {
+    const errText = await response.text();
+    console.error(`❌ Failed to exchange refresh token: ${response.status} ${errText}`);
+    process.exit(1);
+  }
+
+  const data = await response.json();
+  const accessToken = data.access_token || data.token;
+  
+  if (!accessToken) {
+    console.error("❌ Error: Response from /oauth/token did not contain an access token:", JSON.stringify(data));
+    process.exit(1);
+  }
+
+  console.log("✅ Successfully acquired fresh access token.");
+  return accessToken;
 }
 
 async function verifyUrl(url) {
-  // Amazon/Affiliate links often block automated fetches; pre-validate format & domain
   if (url.includes('amazon.com') || url.includes('amzn.to')) {
     return true; 
   }
@@ -38,13 +60,12 @@ async function verifyUrl(url) {
     
     return true;
   } catch (e) {
-    // If network check fails due to strict CORS/anti-bot, allow valid affiliate structure through
     return true;
   }
 }
 
 async function runScheduler() {
-  const headers = getHeaders();
+  const accessToken = await getAccessToken();
 
   const catalogPath = path.resolve('src/data/products.json');
   if (!fs.existsSync(catalogPath)) {
@@ -96,7 +117,10 @@ async function runScheduler() {
     try {
       const postRes = await fetch(`${API_BASE}/videos`, {
         method: 'POST',
-        headers: headers,
+        headers: {
+          'Authorization': `Bearer ${accessToken}`,
+          'Content-Type': 'application/json'
+        },
         body: JSON.stringify(payload)
       });
 
