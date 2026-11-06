@@ -1,92 +1,92 @@
 [
   {
     "id": "item-1",
-    "asin": "B0933BVK6T",
-    "title": "Apple AirTag 4-Pack",
-    "purchaseDriver": "Instant Loss Prevention",
-    "priceBenchmark": "Under $90",
+    "asin": "B07955SLV4",
+    "title": "Anker Portable Magnetic Charger",
+    "purchaseDriver": "Battery Anxiety",
+    "priceBenchmark": "Under $40",
     "features": [
-      "Precision Finding with Ultra Wideband",
-      "One-tap seamless pairing",
-      "1+ year replaceable battery"
+      "Ultra-compact design",
+      "High-speed charging",
+      "Universal device compatibility"
     ],
-    "description": "Eliminates daily anxiety by instantly locating luggage, keys, and wallets.",
-    "conversionHook": "Essential Everyday Tracker",
-    "affiliateUrl": "https://www.amazon.com/dp/B0933BVK6T?tag=adridiscounts-20"
+    "description": "Consumers snap this up instantly to eliminate dead-phone panic while away from home.",
+    "conversionHook": "Essential Everyday",
+    "affiliateUrl": "https://www.amazon.com/dp/B07955SLV4?tag=adridiscounts-20"
   },
   {
     "id": "item-2",
-    "asin": "B0BYNYN87M",
-    "title": "Anker 20,000mAh 30W Fast Portable Charger",
-    "purchaseDriver": "Low Battery Anxiety Relief",
-    "priceBenchmark": "Under $50",
+    "asin": "B08C4KQX9T",
+    "title": "Tile Mate Bluetooth Tracker",
+    "purchaseDriver": "Loss Prevention",
+    "priceBenchmark": "Under $30",
     "features": [
-      "30W USB-C Power Delivery",
-      "Smart digital percentage readout",
-      "Multi-device charging"
+      "Find keys and wallets fast",
+      "Water-resistant build",
+      "Long-lasting replaceable battery"
     ],
-    "description": "Compact travel battery that removes the friction of searching for outlets.",
-    "conversionHook": "High-Velocity Travel Pick",
-    "affiliateUrl": "https://www.amazon.com/dp/B0BYNYN87M?tag=adridiscounts-20"
+    "description": "Shoppers buy this immediately after losing their keys or wallet just once.",
+    "conversionHook": "High Velocity",
+    "affiliateUrl": "https://www.amazon.com/dp/B08C4KQX9T?tag=adridiscounts-20"
   },
   {
     "id": "item-3",
-    "asin": "B0C9R89D6R",
-    "title": "Stanley Quencher H2.0 FlowState 40 oz Tumbler",
-    "purchaseDriver": "Social Proof & Daily Habit Stacking",
-    "priceBenchmark": "Under $50",
+    "asin": "B07WJJV4JV",
+    "title": "Brita Standard Water Filter Pitcher",
+    "purchaseDriver": "Health & Taste Upgrade",
+    "priceBenchmark": "Around $35",
     "features": [
-      "48-hour ice retention",
-      "Car cup-holder base",
-      "Ergonomic comfort handle"
+      "Reduces chlorine and impurities",
+      "Electronic filter indicator",
+      "Sleek fridge-door fit"
     ],
-    "description": "The viral standard for effortless daily hydration across home, work, and travel.",
-    "conversionHook": "Viral Trend Leader",
-    "affiliateUrl": "https://www.amazon.com/dp/B0C9R89D6R?tag=adridiscounts-20"
+    "description": "An impulse health upgrade driven by the desire for clean, great-tasting tap water at home.",
+    "conversionHook": "Top Seller",
+    "affiliateUrl": "https://www.amazon.com/dp/B07WJJV4JV?tag=adridiscounts-20"
   },
   {
     "id": "item-4",
-    "asin": "B0C6B8DPM7",
-    "title": "Ninja Blast Cordless 16 oz Personal Blender",
-    "purchaseDriver": "Frictionless Healthy Habits",
-    "priceBenchmark": "Under $60",
+    "asin": "B091H1KPJG",
+    "title": "Owala FreeSip Insulated Water Bottle",
+    "purchaseDriver": "Daily Hydration Habit",
+    "priceBenchmark": "Under $40",
     "features": [
-      "Rechargeable USB-C base",
-      "Crushes frozen fruit cord-free",
-      "One-handed sip lid"
+      "Patented FreeSip spout",
+      "Triple-layer insulation",
+      "Leak-proof push button"
     ],
-    "description": "Removes kitchen counter cleanup friction for instant smoothies anywhere.",
-    "conversionHook": "Impulse Lifestyle Upgrade",
-    "affiliateUrl": "https://www.amazon.com/dp/B0C6B8DPM7?tag=adridiscounts-20"
+    "description": "Viral social proof and unmatched sipping mechanics make this a frictionless checkout choice.",
+    "conversionHook": "Viral Favorite",
+    "affiliateUrl": "https://www.amazon.com/dp/B091H1KPJG?tag=adridiscounts-20"
   },
   {
     "id": "item-5",
-    "asin": "B07984Q8WW",
-    "title": "Philips Sonicare ProtectiveClean 6100",
-    "purchaseDriver": "Health Investment & Trust",
-    "priceBenchmark": "Under $110",
+    "asin": "B07FZ8S74R",
+    "title": "Revlon One-Step Hair Dryer Brush",
+    "purchaseDriver": "Time-Saving Routine",
+    "priceBenchmark": "Around $50",
     "features": [
-      "Pressure sensor protects gums",
-      "3 brushing modes",
-      "Proven plaque removal"
+      "Dries and styles simultaneously",
+      "Ionic technology cuts frizz",
+      "Ergonomic lightweight design"
     ],
-    "description": "High-trust oral care item with strong repeat purchases and dental backing.",
-    "conversionHook": "Clinic-Grade Routine",
-    "affiliateUrl": "https://www.amazon.com/dp/B07984Q8WW?tag=adridiscounts-20"
+    "description": "Shoppers trade up their morning routine for salon blowouts in half the time.",
+    "conversionHook": "Must-Have Upgrade",
+    "affiliateUrl": "https://www.amazon.com/dp/B07FZ8S74R?tag=adridiscounts-20"
   },
   {
     "id": "item-6",
-    "asin": "B00004OCNS",
-    "title": "Lodge 10.25-Inch Cast Iron Skillet",
-    "purchaseDriver": "Lifetime Value & Low-Cost Durability",
+    "asin": "B00004OCLJ",
+    "title": "OXO Good Grips Box Grater",
+    "purchaseDriver": "Kitchen Ergonomics",
     "priceBenchmark": "Under $25",
     "features": [
-      "Pre-seasoned with 100% natural oil",
-      "Heirloom build",
-      "Versatile stovetop/oven"
+      "Four stainless steel blades",
+      "Soft non-slip handle",
+      "Removable catch container"
     ],
-    "description": "Sub-$25 impulse kitchen buy that lasts generations with zero obsolescence.",
-    "conversionHook": "Best Lifetime Value",
-    "affiliateUrl": "https://www.amazon.com/dp/B00004OCNS?tag=adridiscounts-20"
+    "description": "A low-risk kitchen essential that replaces flimsy graters with instant lifetime durability.",
+    "conversionHook": "Reliable Staple",
+    "affiliateUrl": "https://www.amazon.com/dp/B00004OCLJ?tag=adridiscounts-20"
   }
 ]
